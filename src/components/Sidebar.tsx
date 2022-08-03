@@ -1,0 +1,69 @@
+import React from "react";
+import SwitchBox from "./SwitchBox";
+import SidebarMenu from "./SidebarMenu";
+
+const Sidebar = () => {
+	const menu = [
+		{
+			text: "Home",
+			link: "/",
+			icon: "home",
+		},
+		{
+			text: "OTP",
+			link: "/otp",
+			icon: "sim",
+			children: [
+				{
+					text: "Rent A Number",
+					link: "/rent-a-number",
+				},
+				{
+					text: "OTP History",
+					link: "/otp-history",
+				},
+			],
+		},
+		{
+			text: "Account Infomation",
+			link: "/account-information",
+			icon: "profile",
+		},
+		{
+			text: "Addfund",
+			link: "/addfund",
+			icon: "bank",
+		},
+		{
+			text: "Balance Log",
+			link: "/balance-log",
+			icon: "wallet",
+		},
+		{
+			text: "API Document",
+			link: "/api-document",
+			icon: "web-development",
+		},
+	];
+	return (
+		<div className="hidden md:flex flex-col bg-[#fcfcfc] fixed top-0 left-0 z-50 h-full w-full md:w-80 p-6">
+			<div className="mb-12">
+				<a href="/">
+					<div className="w-[48px] h-[48px] overflow-hidden relative">
+						<img
+							className="absolute top-0 left-0 w-full h-full object-contain"
+							src="//via.placeholder.com/48x48.png"
+							alt=""
+						/>
+					</div>
+				</a>
+			</div>
+			{menu && <SidebarMenu menu={menu} />}
+			<div className="mt-auto mb-0">
+				<SwitchBox />
+			</div>
+		</div>
+	);
+};
+
+export default Sidebar;

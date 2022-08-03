@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	html {
+		font-family: "Inter", system-ui, sans-serif;
+		background-color: #f4f4f4;
+	}
+}
+
+.sub-menu {
+	>li {
+		position: relative;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: 50%;
+			width: 16px;
+			height: 50%;
+			border-left: 2px solid #efefef;
+			border-bottom: 2px solid #efefef;
+			border-bottom-left-radius: 12px;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			height: 100%;
+			border-left: 2px solid #efefef;
+		}
+
+		&:last-child {
+			&::after {
+				height: 30%;
+				bottom: auto;
+				top: 0;
+			}
+		}
+	}
+}
+
+.switch-box {
+	color: #6f767e;
+	padding: 4px;
+	border-radius: 40px;
+	background: #f4f4f4;
+
+	&__wrapper {
+		position: relative;
+		display: flex;
+		gap: 4px;
+	}
+
+	&__item {
+		padding: 6px 24px;
+		position: relative;
+		z-index: 2;
+		flex: 1;
+		cursor: pointer;
+		transition: all 0.3s;
+
+		&:hover {
+			color: #1a1d1f;
+		}
+	}
+
+	&>input:checked+&__wrapper .switch-box__item--true {
+		color: #1a1d1f;
+	}
+
+	&>input+&__wrapper:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		border-radius: 36px;
+		background-color: #fcfcfc;
+		width: 50%;
+		z-index: 1;
+		box-shadow: 0px 4px 8px -4px rgba(0, 0, 0, 0.25),
+			inset 0px -1px 1px rgba(0, 0, 0, 0.04),
+			inset 0px 2px 0px rgba(255, 255, 255, 0.25);
+		transition: all 0.3s;
+	}
+
+	&>input:checked+&__wrapper:before {
+		transform: translateX(0);
+	}
+
+	&>input:not(:checked)+&__wrapper:before {
+		transform: translateX(100%);
+	}
+
+	&>input:disabled+&__wrapper {
+		opacity: 0.5;
+
+		.switch-box__item {
+			cursor: default;
+			color: #6f767e;
+		}
+	}
+}

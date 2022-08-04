@@ -10,6 +10,7 @@ interface Props {
 
 const Accordion: React.FC<Props> = ({title, children, active, ...props }) => {
     const [isActive, setIsActive] = useState(active || false);
+
 	return (
 		<div className="border-b border-[#efefef] py-4 mb-2" {...props}>
 			<div 
@@ -17,9 +18,16 @@ const Accordion: React.FC<Props> = ({title, children, active, ...props }) => {
                 onClick={() => setIsActive(!isActive)}
             >
                 <span className="grow">{title}</span>
-                <SVGIcon name={ isActive ? 'arrow-down' : 'arrow-right' } w={24} h={24} className="ml-4"/>
+                <SVGIcon name="arrow-right" w={24} h={24} className={`ml-4 transition ease-in-out duration-300 ${isActive && 'rotate-90'}`}/>
             </div>
-			{isActive && <div className="px-4 py-6 bg-[#f4f4f4] rounded-lg mt-2">{children}</div>}
+            <CSSTransition 
+                in={isActive}
+                timeout={300}
+                classNames='slide-x'
+                unmountOnExit
+            > 
+                <div className="px-4 py-6 bg-[#f4f4f4] rounded-lg mt-2 overflow-hidden">{children}</div>
+            </CSSTransition>
 		</div>
 	);
 };

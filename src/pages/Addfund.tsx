@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "../components/Card";
+import Pagination from "../components/Pagination";
 
 const Addfund = () => {
 	return (
@@ -7,8 +8,7 @@ const Addfund = () => {
 			<div className="col-span-1 md:col-span-2">
 				<Card
 					title="Addfund infomation"
-					titleTagColor="#b5e4ca"
-					backgroundColor="#fcfcfc"
+					cardStyle="b5e4ca"
 				>
 					<div>
 						<div className="bg-[#47a361] px-6 py-7 rounded-lg mb-6">
@@ -103,8 +103,7 @@ const Addfund = () => {
 				</Card>
 				<Card
 					title="Addfund List"
-					titleTagColor="#ffbc99"
-					backgroundColor="#fcfcfc"
+					cardStyle="ffbc99"
 				>
 					<table className="table-auto w-full">
 						<thead className="text-sm font-semibold text-[#6f767e]">
@@ -244,14 +243,13 @@ const Addfund = () => {
 							</tr>
 						</tbody>
 					</table>
+					<Pagination />
 				</Card>
 			</div>
 			<div className="col-span-1">
 				<Card
 					title="Note"
-					titleTagColor="#ffbc99"
-					backgroundColor="#ffbc99"
-					className="bg-opacity-25"
+					cardStyle="note"
 				>
 					<div>
 						<ul className="list-disc text-sm font-medium text-[#1a1d1f] pl-4">

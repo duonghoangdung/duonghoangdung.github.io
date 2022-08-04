@@ -3,6 +3,7 @@ import Card from "../components/Card";
 import Table, { ColumnType, RowType } from "../components/Table";
 import { Chart as ChartJS, ArcElement, Tooltip } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
+import Pagination from "../components/Pagination";
 
 ChartJS.register(ArcElement, Tooltip);
 
@@ -60,12 +61,11 @@ const Home = () => {
 		],
 	};
 	return (
-		<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+		<div className="grid grid-cols-1 md:grid-cols-3 gap-2">
 			<div className="col-span-1">
 				<Card
 					title="Account information"
-					titleTagColor="#cabdff"
-					backgroundColor="#fcfcfc"
+					cardStyle="cabdff"
 				>
 					<div className="mb-6">
 						<div className="text-sm font-semibold text-[#6f767e] mb-2">
@@ -96,8 +96,7 @@ const Home = () => {
 			<div className="col-span-1 md:col-span-2">
 				<Card
 					title="OTP"
-					titleTagColor="#ffbc99"
-					backgroundColor="#fcfcfc"
+					cardStyle="ffbc99"
 				>
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 						<div className="col-span-1 flex items-center justify-center">
@@ -195,11 +194,11 @@ const Home = () => {
 				</Card>
 				<Card
 					title="Detail"
-					titleTagColor="#ffbc99"
-					backgroundColor="#fcfcfc"
+					cardStyle="ffbc99"
 				>
 					<div className="overflow-x-auto">
 						<Table columns={columns} data={data} />
+						<Pagination />
 					</div>
 				</Card>
 			</div>

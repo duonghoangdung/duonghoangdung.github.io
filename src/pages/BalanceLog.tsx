@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Button from '../components/Button';
 import Card from '../components/Card';
+import Pagination from '../components/Pagination';
 import SearchInput from '../components/SearchInput';
 import Select, { SelectType } from '../components/Select';
 import Table, { ColumnType, RowType } from '../components/Table';
@@ -76,7 +77,7 @@ const BalanceLog = () => {
     const [option1, setOption1] = useState<SelectType>();
     const [option2, setOption2] = useState<SelectType>();
     return (
-        <Card title="Log" titleTagColor="#cabdff" backgroundColor="#fcfcfc">
+        <Card title="Log">
             <div className='flex items-center gap-2 overflow-x-auto'> 
                 <SearchInput />
                 <select name="" id="" className='border-2 border-[#efefef] rounded-xl px-4 py-2 text-sm font-semibold text-[#6f767e]'>
@@ -87,10 +88,11 @@ const BalanceLog = () => {
                 </select>
                 {/* <Select options={sortByDayOptions} value={option1} onSelect={(option) => setOption1(option)}/>
                 <Select options={sortByDayOptions} value={option2} onSelect={(option) => setOption2(option)}/> */}
-                <Button>Search</Button>
+                <Button buttonSize="sm" buttonStyle="primary">Search</Button>
             </div>
             <div className='overflow-x-auto'>
                 <Table columns={columns} data={data}/>
+                <Pagination />
             </div>
         </Card>
     )

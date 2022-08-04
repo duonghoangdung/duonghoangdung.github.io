@@ -3,8 +3,8 @@ import Sprites from '../assets/icons/sprites.svg';
 
 interface Props {
     name: string,
-    w: number,
-    h:number,
+    w?: number,
+    h?:number,
     className?: string
 }
 

@@ -1,6 +1,8 @@
 import React from "react";
 import AppCard from "../components/AppCard";
 import Card from "../components/Card";
+import Input from "../components/Input";
+import SearchInput from "../components/SearchInput";
 import SVGIcon from "../components/SVGIcon";
 
 const RentANumber = () => {
@@ -42,9 +44,20 @@ const RentANumber = () => {
 			<div className="col-span-1">
 				<Card
 					title="Application list"
-					titleTagColor="#cabdff"
-					backgroundColor="#fcfcfc"
 				>
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+						<div className="col-span-1">
+							<label htmlFor="">Carrier</label>
+						</div>
+						<div className="col-span-1">
+							<label htmlFor="">Prefix</label>
+							<Input placeholder="Ex:0399,0935"></Input>
+						</div>
+						<div className="col-span-1 md:col-span-2">
+							<SearchInput />
+						</div>
+					</div>
+					<div className="text-sm font-medium text-[#6f767e] mb-3">Select to buy</div>
 					<div className="grid grid-cols-2 gap-2">
 						{apps.map(({ name, image, description}, index) => <AppCard key={index} name={name} image={image} description={description} />)}
 					</div>
@@ -53,8 +66,6 @@ const RentANumber = () => {
 			<div className="col-span-1 md:col-span-2">
 				<Card
 					title="Codes"
-					titleTagColor="#cabdff"
-					backgroundColor="#fcfcfc"
 				>
 					<div className="overflow-x-auto">
 						<table className="w-full">
@@ -108,6 +119,9 @@ const RentANumber = () => {
 								</tr>
 							</tbody>
 						</table>
+					</div>
+					<div className="text-center">
+						<SVGIcon name="nodata"/>
 					</div>
 				</Card>
 			</div>

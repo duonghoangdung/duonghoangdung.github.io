@@ -5,12 +5,11 @@ import SVGIcon from "../components/SVGIcon";
 
 const APIDocument = () => {
 	return (
-		<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+		<div className="grid grid-cols-1 md:grid-cols-3 gap-2">
 			<div className="col-span-1 md:col-span-2">
 				<Card
 					title="API Integration"
-					titleTagColor="#e5b4ca"
-					backgroundColor="#fcfcfc"
+					cardStyle="b5e4ca"
 				>
 					<div className="grid grid-cols-2 gap-8 items-center">
 						<div className="flex items-center">
@@ -38,8 +37,7 @@ const APIDocument = () => {
 				</Card>
 				<Card
 					title="Guide to use"
-					titleTagColor="#b1e5fc"
-					backgroundColor="#fcfcfc"
+					cardStyle="b1e5fc"
 				>
 					<Accordion title="1. Get account infomation" active={true}>
 						<div className="mb-4">
@@ -111,9 +109,7 @@ const APIDocument = () => {
 			<div className="col-span-1">
 				<Card
 					title="Note"
-					titleTagColor="#ffbc99"
-					backgroundColor="#ffbc99"
-					className="bg-opacity-25"
+					cardStyle="note"
 				>
 					<div>
 						<ul className="list-disc text-sm font-medium text-[#1a1d1f] pl-4">

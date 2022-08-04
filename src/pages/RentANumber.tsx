@@ -40,7 +40,7 @@ const RentANumber = () => {
 	]
 
 	return (
-		<div className="grid grid-cols-1 md:grid-cols-3 gap-2">
+		<div className="grid grid-cols-1 lg:grid-cols-3 gap-2">
 			<div className="col-span-1">
 				<Card
 					title="Application list"
@@ -63,7 +63,7 @@ const RentANumber = () => {
 					</div>
 				</Card>
 			</div>
-			<div className="col-span-1 md:col-span-2">
+			<div className="col-span-1 lg:col-span-2">
 				<Card
 					title="Codes"
 				>

@@ -43,11 +43,11 @@ const AccountInformation = () => {
 					<div className="absolute top-0 left-0 h-full w-4 bg-[#cabdff] rounded"></div>
 					<span>Password</span>
 				</div>
-				<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+				<div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
 					<div className="col-span-1">
 						<Input id="old_password" name="old_password" type="password" label="Old password"/>
 					</div>
-					<div className="hidden md:block col-span-1"></div>
+					<div className="hidden lg:block col-span-1"></div>
 					<div className="col-span-1">
 						<Input id="new_password" name="new_password" type="password" label="New password"/>
 					</div>

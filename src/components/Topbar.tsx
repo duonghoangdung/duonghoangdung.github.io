@@ -1,10 +1,16 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
+import SVGIcon from "./SVGIcon";
 
 const Topbar = () => {
 	return (
-		<div className="flex items-center gap-6 bg-[#fcfcfc] px-10 py-6 w-full">
-			<div className="grow min-w-0">
+		<div className="flex items-center gap-6 bg-[#fcfcfc] px-6 md:px-10 py-0 md:py-6 w-full shadow-[inset_0_-1px_0_#f4f4f4]">
+			<div className="md:hidden">
+				<button className="flex items-center justify-center text-[#6f767e] p-3">
+					<SVGIcon name="menu" w={24} h={24}/>
+				</button>
+			</div>
+			<div className="hidden md:block grow min-w-0">
 				<div className="rounded-xl bg-[#ffd88d] text-[#1a1d1f] w-full max-w-full p-2">
 					<Marquee gradient={false} className="overflow-hidden">
 						<p className="text-sm font-semibold">
@@ -15,7 +21,7 @@ const Topbar = () => {
 					</Marquee>
 				</div>
 			</div>
-			<div className="flex-none flex items-center justify-items-center gap-6">
+			<div className="hidden md:flex flex-none items-center justify-items-center gap-6">
 				<div>
 					<a href="#">
 						<div className="w-[48px] h-[48px] relative overflow-hidden rounded-full">

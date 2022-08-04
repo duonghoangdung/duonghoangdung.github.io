@@ -5,13 +5,13 @@ import SVGIcon from "../components/SVGIcon";
 
 const APIDocument = () => {
 	return (
-		<div className="grid grid-cols-1 md:grid-cols-3 gap-2">
-			<div className="col-span-1 md:col-span-2">
+		<div className="grid grid-cols-1 lg:grid-cols-3 gap-2">
+			<div className="col-span-1 lg:col-span-2">
 				<Card
 					title="API Integration"
 					cardStyle="b5e4ca"
 				>
-					<div className="grid grid-cols-2 gap-8 items-center">
+					<div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
 						<div className="flex items-center">
 							<div className="mr-3">
 								<SVGIcon name="code" w={64} h={64} />

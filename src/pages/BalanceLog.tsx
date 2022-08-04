@@ -78,7 +78,7 @@ const BalanceLog = () => {
     const [option2, setOption2] = useState<SelectType>();
     return (
         <Card title="Log">
-            <div className='flex items-center gap-2 overflow-x-auto'> 
+            <div className='flex flex-wrap items-center gap-2 overflow-x-auto'> 
                 <SearchInput />
                 <select name="" id="" className='border-2 border-[#efefef] rounded-xl px-4 py-2 text-sm font-semibold text-[#6f767e]'>
                     <option value="">All Status</option>

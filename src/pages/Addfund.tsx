@@ -4,8 +4,8 @@ import Pagination from "../components/Pagination";
 
 const Addfund = () => {
 	return (
-		<div className="grid grid-cols-1 md:grid-cols-3 gap-2">
-			<div className="col-span-1 md:col-span-2">
+		<div className="grid grid-cols-1 lg:grid-cols-3 gap-2">
+			<div className="col-span-1 lg:col-span-2">
 				<Card
 					title="Addfund infomation"
 					cardStyle="b5e4ca"

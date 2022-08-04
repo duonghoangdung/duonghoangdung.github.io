@@ -1,12 +1,15 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
 import SVGIcon from "./SVGIcon";
+interface Props {
+	onMenuToggle?: () => void
+}
 
-const Topbar = () => {
+const Topbar:React.FC<Props> = ({onMenuToggle, ...props}) => {
 	return (
-		<div className="flex items-center gap-6 bg-[#fcfcfc] px-6 md:px-10 py-0 md:py-6 w-full shadow-[inset_0_-1px_0_#f4f4f4]">
+		<div className="flex items-center gap-6 bg-[#fcfcfc] px-6 md:px-10 py-0 md:py-6 w-full shadow-[inset_0_-1px_0_#f4f4f4]" {...props}>
 			<div className="md:hidden">
-				<button className="flex items-center justify-center text-[#6f767e] p-3">
+				<button className="flex items-center justify-center text-[#6f767e] p-3" onClick={() => onMenuToggle?.()}>
 					<SVGIcon name="menu" w={24} h={24}/>
 				</button>
 			</div>

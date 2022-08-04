@@ -1,9 +1,15 @@
 import React from "react";
+import { CSSTransition } from "react-transition-group";
 import SwitchBox from "./SwitchBox";
 import SidebarMenu from "./SidebarMenu";
 import SVGIcon from "./SVGIcon";
 
-const Sidebar = () => {
+interface Props {
+	isMenuActive?: boolean;
+	onMenuToggle?: () => void;
+}
+
+const Sidebar:React.FC<Props> = ({isMenuActive, onMenuToggle, ...props}) => {
 	const menu = [
 		{
 			text: "Home",
@@ -46,31 +52,38 @@ const Sidebar = () => {
 			icon: "web-development",
 		},
 	];
+
 	return (
-		<div className="hidden md:flex flex-col bg-[#fcfcfc] fixed top-0 left-0 z-50 h-full w-full md:w-80">
-			<div className="md:hidden px-6 shadow-[inset_0_-1px_0_#f4f4f4]">
-				<button className="flex items-center justify-center text-[#6f767e] p-3">
-					<SVGIcon name="close" w={24} h={24} />
-				</button>
-			</div>
-			<div className="flex flex-col p-6 h-full w-full">
-				<div className="mb-12 hidden md:block">
-					<a href="/">
-						<div className="w-[48px] h-[48px] overflow-hidden relative">
-							<img
-								className="absolute top-0 left-0 w-full h-full object-contain"
-								src="//via.placeholder.com/48x48.png"
-								alt=""
-							/>
-						</div>
-					</a>
+		<CSSTransition
+			in={isMenuActive}
+			timeout={300}
+			classNames="slide-x"
+		>
+			<div className={`${ !isMenuActive && 'hidden'} md:flex flex-col bg-[#fcfcfc] fixed top-0 left-0 z-50 h-full w-full md:w-80`} {...props}>
+				<div className="md:hidden px-6 shadow-[inset_0_-1px_0_#f4f4f4]">
+					<button className="flex items-center justify-center text-[#6f767e] p-3" onClick={() => onMenuToggle?.()}>
+						<SVGIcon name="close" w={24} h={24} />
+					</button>
 				</div>
-				{menu && <SidebarMenu menu={menu} />}
-				<div className="mt-auto mb-0">
-					<SwitchBox />
+				<div className="flex flex-col p-6 h-full w-full">
+					<div className="mb-12 hidden md:block">
+						<a href="/">
+							<div className="w-[48px] h-[48px] overflow-hidden relative">
+								<img
+									className="absolute top-0 left-0 w-full h-full object-contain"
+									src="//via.placeholder.com/48x48.png"
+									alt=""
+								/>
+							</div>
+						</a>
+					</div>
+					{menu && <SidebarMenu menu={menu} />}
+					<div className="mt-auto mb-0">
+						<SwitchBox />
+					</div>
 				</div>
 			</div>
-		</div>
+		</CSSTransition>
 	);
 };
 

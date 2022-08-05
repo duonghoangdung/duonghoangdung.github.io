@@ -56,7 +56,7 @@ const Sidebar = ({ ...props}) => {
 		<CSSTransition
 			in={state.active}
 			timeout={300}
-			classNames="slide-x"
+			classNames="sidebar"
 		>
 			<div className={`${ state.active ? 'flex' : 'hidden'} md:flex flex-col bg-[#fcfcfc] fixed top-0 left-0 z-50 h-full w-full md:w-80`} {...props}>
 				<div className="md:hidden px-6 shadow-[inset_0_-1px_0_#f4f4f4]">

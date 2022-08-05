@@ -130,3 +130,33 @@
 		transition: max-height .3s ease-in-out, opacity .3s ease-in-out;
 	}
 }
+
+@media (max-width: 767px) {
+	.sidebar {
+		&-enter {
+			opacity: 0;
+			max-height: 0px;
+		}
+
+		&-enter-active {
+			opacity: 1;
+			max-height: 100rem;
+			transition: max-height .3s ease-in-out, opacity .3s ease-in-out;
+		}
+
+		&-exit {
+			opacity: 1;
+			max-height: 100rem;
+		}
+
+		&-exit-active {
+			opacity: 0;
+			max-height: 0px;
+			transition: max-height .3s ease-in-out, opacity .3s ease-in-out;
+		}
+
+		&-exit-done {
+			display: none;
+		}
+	}
+}

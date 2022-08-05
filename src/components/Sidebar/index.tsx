@@ -1,15 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { CSSTransition } from "react-transition-group";
-import SwitchBox from "./SwitchBox";
+import { SidebarContext } from './context';
+import { SidebarActionKind } from './reducer';
+import SwitchBox from "../SwitchBox";
 import SidebarMenu from "./SidebarMenu";
-import SVGIcon from "./SVGIcon";
+import SVGIcon from "../SVGIcon";
 
-interface Props {
-	isMenuActive?: boolean;
-	onMenuToggle?: () => void;
-}
+const Sidebar = ({ ...props}) => {
+	const { state, dispatch } = useContext(SidebarContext);
 
-const Sidebar:React.FC<Props> = ({isMenuActive, onMenuToggle, ...props}) => {
 	const menu = [
 		{
 			text: "Home",
@@ -55,13 +54,13 @@ const Sidebar:React.FC<Props> = ({isMenuActive, onMenuToggle, ...props}) => {
 
 	return (
 		<CSSTransition
-			in={isMenuActive}
+			in={state.active}
 			timeout={300}
 			classNames="slide-x"
 		>
-			<div className={`${ isMenuActive ? 'flex' : 'hidden'} md:flex flex-col bg-[#fcfcfc] fixed top-0 left-0 z-50 h-full w-full md:w-80`} {...props}>
+			<div className={`${ state.active ? 'flex' : 'hidden'} md:flex flex-col bg-[#fcfcfc] fixed top-0 left-0 z-50 h-full w-full md:w-80`} {...props}>
 				<div className="md:hidden px-6 shadow-[inset_0_-1px_0_#f4f4f4]">
-					<button className="flex items-center justify-center text-[#6f767e] p-3" onClick={() => onMenuToggle?.()}>
+					<button className="flex items-center justify-center text-[#6f767e] p-3" onClick={() => dispatch({type: SidebarActionKind.TOGGLE})}>
 						<SVGIcon name="close" w={24} h={24} />
 					</button>
 				</div>
@@ -77,7 +76,7 @@ const Sidebar:React.FC<Props> = ({isMenuActive, onMenuToggle, ...props}) => {
 							</div>
 						</a>
 					</div>
-					{menu && <SidebarMenu menu={menu} />}
+					{menu && <SidebarMenu menu={menu}/>}
 					<div className="mt-auto mb-0">
 						<div className="flex items-center md:hidden p-3 bg-[#f4f4f4] rounded-xl mb-4">
 							<div className="mr-3">

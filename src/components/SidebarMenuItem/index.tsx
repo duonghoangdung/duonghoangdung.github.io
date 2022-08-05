@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { CSSTransition } from "react-transition-group";
 import SVGIcon from "../SVGIcon";
 import { SidebarMenuItemType } from "./types";
 import { NavLink } from "react-router-dom";
+import { SidebarContext } from "../Sidebar/context";
+import { SidebarActionKind } from "../Sidebar/reducer";
 
 const SidebarMenuItem: React.FC<SidebarMenuItemType> = ({
 	text,
@@ -13,6 +15,7 @@ const SidebarMenuItem: React.FC<SidebarMenuItemType> = ({
 	...props
 }) => {
 	const [isActive, setIsActive] = useState(false);
+	const { dispatch } = useContext(SidebarContext);
 	return (
 		<li className={`${isSubMenu ? "pl-4 pb-2" : "mb-2"}`} {...props}>
 			<NavLink
@@ -29,6 +32,9 @@ const SidebarMenuItem: React.FC<SidebarMenuItemType> = ({
 					if (children) {
 						e.preventDefault();
 						setIsActive(!isActive);
+					}
+					else {
+						dispatch({type: SidebarActionKind.TOGGLE})
 					}
 				}}
 			>
@@ -51,7 +57,7 @@ const SidebarMenuItem: React.FC<SidebarMenuItemType> = ({
 				<CSSTransition
 					in={isActive}
 					timeout={300}
-					classNames="slide-x"
+					classNames="slide-menu"
 					unmountOnExit
 				>
 					<ul className="pl-7 pt-2 sub-menu">

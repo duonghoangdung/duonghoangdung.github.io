@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import Marquee from "react-fast-marquee";
+import { SidebarContext } from "./Sidebar/context";
+import { SidebarActionKind } from "./Sidebar/reducer";
 import SVGIcon from "./SVGIcon";
-interface Props {
-	onMenuToggle?: () => void
-}
 
-const Topbar:React.FC<Props> = ({onMenuToggle, ...props}) => {
+const Topbar = ({...props}) => {
+	
+	const { dispatch } = useContext(SidebarContext);
+
 	return (
 		<div className="flex items-center gap-6 bg-[#fcfcfc] px-6 md:px-10 py-0 md:py-6 w-full shadow-[inset_0_-1px_0_#f4f4f4]" {...props}>
 			<div className="md:hidden">
-				<button className="flex items-center justify-center text-[#6f767e] p-3" onClick={() => onMenuToggle?.()}>
+				<button className="flex items-center justify-center text-[#6f767e] p-3" onClick={() => dispatch({type: SidebarActionKind.TOGGLE})}>
 					<SVGIcon name="menu" w={24} h={24}/>
 				</button>
 			</div>

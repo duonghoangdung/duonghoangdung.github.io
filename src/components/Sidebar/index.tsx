@@ -58,7 +58,7 @@ const Sidebar = ({ ...props}) => {
 			timeout={300}
 			classNames="sidebar"
 		>
-			<div className={`${ state.active ? 'flex' : 'hidden'} md:flex flex-col bg-[#fcfcfc] fixed top-0 left-0 z-50 h-full w-full md:w-80`} {...props}>
+			<div className={`${ state.active ? 'flex' : 'hidden'} md:flex flex-col bg-[#fcfcfc] fixed top-0 left-0 z-30 h-full w-full md:w-80`} {...props}>
 				<div className="md:hidden px-6 shadow-[inset_0_-1px_0_#f4f4f4]">
 					<button className="flex items-center justify-center text-[#6f767e] p-3" onClick={() => dispatch({type: SidebarActionKind.TOGGLE})}>
 						<SVGIcon name="close" w={24} h={24} />

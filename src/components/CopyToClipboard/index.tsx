@@ -29,7 +29,7 @@ const  CopyToClipboard:React.FC<Props> = ({ children, ...props}) => {
             {
                 name: 'offset',
                 options: {
-                  offset: [4, 4],
+                  offset: [8, 8],
                 },
             }
         ],
@@ -44,7 +44,7 @@ const  CopyToClipboard:React.FC<Props> = ({ children, ...props}) => {
     return (
         <>
             {children({ copy: onCopy, setReferenceElement })}
-            {showTooltip && <div className="popper-tooltip text-xs font-semibold text-[#1a1d1f] bg-white rounded px-3 py-1 transition" ref={setPopperElement} style={styles.popper} {...attributes.popper}>
+            {showTooltip && <div className="popper-tooltip text-xs font-semibold text-[#1a1d1f] bg-white rounded px-3 py-1 transition shadow" ref={setPopperElement} style={styles.popper} {...attributes.popper}>
                 Copied!
                 <div className="popper-arrow" ref={setArrowElement} style={styles.arrow}/>
             </div>}

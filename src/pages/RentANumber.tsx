@@ -45,13 +45,16 @@ const RentANumber = () => {
 				<Card
 					title="Application list"
 				>
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-3">
 						<div className="col-span-1">
-							<label htmlFor="">Carrier</label>
+							<label className="inline-block text-sm font-semibold text-[#33383f] mb-3">Carrier</label>
+							<select className="border-2 border-[#efefef] rounded-xl w-full bg-[#fcfcfc] px-3 py-2">
+								<option>All</option>
+							</select>
 						</div>
 						<div className="col-span-1">
-							<label htmlFor="">Prefix</label>
-							<Input placeholder="Ex:0399,0935"></Input>
+							<label className="inline-block text-sm font-semibold text-[#33383f] mb-3">Prefix</label>
+							<input type="text" placeholder="Ex:0399,0935" className="border-2 border-[#efefef] rounded-xl w-full bg-[#fcfcfc] px-3 py-2" />
 						</div>
 						<div className="col-span-1 md:col-span-2">
 							<SearchInput />

@@ -27,7 +27,11 @@ const Addfund = () => {
 								</div>
 								<div>
 									<div className="text-[#6f767e] mb-2">Account owner's name</div>
-									<div className="text-[#1a1d1f]">HA TRI TAM</div>
+									<div className="text-[#1a1d1f]">HA TRI TAM
+										<CopyToClipboard>
+											{({ copy, setReferenceElement }) => <button ref={setReferenceElement} onClick={() => copy("HA TRI TAM")} className="text-[#2a85ff] hover:opacity-75 transition-opacity ml-2">Copy</button>}
+										</CopyToClipboard>
+									</div>
 								</div>
 								<div>
 									<div className="text-[#6f767e] mb-2">Transaction content</div>

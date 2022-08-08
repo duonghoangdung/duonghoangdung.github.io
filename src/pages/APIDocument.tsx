@@ -1,6 +1,7 @@
 import React from "react";
 import Accordion from "../components/Accordion";
 import Card from "../components/Card";
+import CopyToClipboard from "../components/CopyToClipboard";
 import SVGIcon from "../components/SVGIcon";
 
 const APIDocument = () => {
@@ -26,9 +27,9 @@ const APIDocument = () => {
 							</div>
 						</div>
 						<div className="grid grid-cols-2 gap-2 items-center">
-							<button className="font-bold text-[#ffffff] bg-[#2a85ff] rounded-xl px-5 py-3">
-								Copy
-							</button>
+							<CopyToClipboard>
+								{({ copy, setReferenceElement }) => <button ref={setReferenceElement} onClick={() => copy("9fd4b9ccdf38dc5a")} className="font-bold text-[#ffffff] bg-[#2a85ff] rounded-xl px-5 py-3">Copy</button>}
+							</CopyToClipboard>
 							<button className="font-bold text-[#1a1d1f] bg-[#fcfcfc] border-2 border-[#efefef] rounded-xl px-5 py-3">
 								Renew
 							</button>

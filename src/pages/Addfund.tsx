@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "../components/Card";
+import CopyToClipboard from "../components/CopyToClipboard";
 import Pagination from "../components/Pagination";
 
 const Addfund = () => {
@@ -10,96 +11,43 @@ const Addfund = () => {
 					title="Addfund infomation"
 					cardStyle="b5e4ca"
 				>
-					<div>
-						<div className="bg-[#47a361] px-6 py-7 rounded-lg mb-6">
-							<div className="relative text-xl font-semibold text-[#ffffff] mb-6 pl-8">
-								<div className="absolute top-0 left-0 h-full w-4 bg-[#ffbc99] rounded"></div>
-								<span>Vietcombank</span>
-							</div>
-							<div className="text-sm font-semibold text-[#ffffff]">
-								<div className="mb-6">
-									<div className="text-[#efefef] mb-2">
-										Bank
-									</div>
-									<div>Vietcombank</div>
+						<div className="bg-[#f4f4f4] p-6 rounded-lg mb-6 text-sm font-semibold">
+							<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+								<div>
+									<div className="text-[#6f767e] mb-2">Bank</div>
+									<div className="text-[#1a1d1f]">Vietcombank</div>
 								</div>
-								<div className="flex items-center mb-6">
-									<div className="grow me-6">
-										<div className="text-[#efefef] mb-2">
-											Account number
-										</div>
-										<div>1019556601</div>
-									</div>
-									<div className="ml-auto mr-0">
-										<button className="font-bold text-[#1a1d1f] bg-[#fcfcfc] rounded-xl px-5 py-3">
-											Copy
-										</button>
+								<div>
+									<div className="text-[#6f767e] mb-2">Account number</div>
+									<div className="text-[#1a1d1f]">1019556601 
+										<CopyToClipboard>
+											{({ copy, setReferenceElement }) => <button ref={setReferenceElement} onClick={() => copy("1019556601")} className="text-[#2a85ff] hover:opacity-75 transition-opacity ml-2">Copy</button>}
+										</CopyToClipboard>
 									</div>
 								</div>
-								<div className="flex items-center mb-6">
-									<div className="grow me-6">
-										<div className="text-[#efefef] mb-2">
-											Account owner's name
-										</div>
-										<div>HA TRI TAM</div>
-									</div>
-									<div className="ml-auto mr-0">
-										<button className="font-bold text-[#1a1d1f] bg-[#fcfcfc] rounded-xl px-5 py-3">
-											Copy
-										</button>
-									</div>
+								<div>
+									<div className="text-[#6f767e] mb-2">Account owner's name</div>
+									<div className="text-[#1a1d1f]">HA TRI TAM</div>
 								</div>
-								<div className="flex items-center mb-6">
-									<div className="grow me-6">
-										<div className="text-[#efefef] mb-2">
-											Transaction content
-										</div>
-										<div>CTSC 0399900661</div>
-									</div>
-									<div className="ml-auto mr-0">
-										<button className="font-bold text-[#1a1d1f] bg-[#fcfcfc] rounded-xl px-5 py-3">
-											Copy
-										</button>
+								<div>
+									<div className="text-[#6f767e] mb-2">Transaction content</div>
+									<div className="text-[#1a1d1f]">CTSC 0399900661 
+										<CopyToClipboard>
+											{({ copy, setReferenceElement }) => <button ref={setReferenceElement} onClick={() => copy("1019556601")} className="text-[#2a85ff] hover:opacity-75 transition-opacity ml-2">Copy</button>}
+										</CopyToClipboard>
 									</div>
 								</div>
 							</div>
 						</div>
 
-						<div className="bg-[#f4f4f4] rounded-lg px-4 py-6">
-							<div className="text-lg font-semibold text-[#1d1e1f] mb-2">
-								Lưu ý
-							</div>
-							<ul className="list-disc text-sm font-medium text-[#1a1d1f] pl-4 mb-2">
-								<li className="mb-2">
-									<p>
-										Nội dung CK : CTSC+&lt;khoảng
-										cách&gt;+sdt
-									</p>
-								</li>
-								<li className="mb-2">
-									<p>
-										Khi chuyển khoản quý khách vui lòng ghi
-										đúng nội dung ck mà web cung cấp để auto
-										nạp số dư.
-									</p>
-								</li>
-								<li className="mb-2">
-									<p>
-										Nếu quý khách ghi nhầm nội dung ck vui
-										lòng chụp ảnh bill chi tiết gửi vào zalo
-										hỗ trợ kèm theo nội dung ck đúng.
-									</p>
-								</li>
-								<li>
-									<p>Số tiền nạp tối thiểu là 30,000</p>
-								</li>
-							</ul>
-							<p className="text-sm font-medium text-[#ff6a55]">
-								*Hệ thống không chịu trách nhiệm nếu nội dung
-								nạp không đúng CTSC 0399900661
-							</p>
-						</div>
-					</div>
+						<div className="text-lg font-semibold text-[#ff6a55] mb-2">Lưu ý</div>
+						<ul className="list-disc text-sm leading-6 font-normal text-[#1a1d1f] pl-4 mb-4">
+							<li>Nội dung CK : CTSC+&lt;khoảng cách&gt;+sdt</li>
+							<li>Khi chuyển khoản quý khách vui lòng ghi đúng nội dung ck mà web cung cấp để auto nạp số dư.</li>
+							<li>Nếu quý khách ghi nhầm nội dung ck vui lòng chụp ảnh bill chi tiết gửi vào zalo hỗ trợ kèm theo nội dung ck đúng.</li>
+							<li>Số tiền nạp tối thiểu là 30,000</li>
+						</ul>
+						<p className="text-sm font-semibold text-[#111315]">*Hệ thống không chịu trách nhiệm nếu nội dung nạp không đúng CTSC 0399900661</p>
 				</Card>
 				<Card
 					title="Addfund List"

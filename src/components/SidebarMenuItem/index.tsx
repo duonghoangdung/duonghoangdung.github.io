@@ -23,7 +23,7 @@ const SidebarMenuItem: React.FC<SidebarMenuItemType> = ({
 					return `${
 						props.isActive
 							? "flex items-center text-[#1a1d1f] bg-[#efefef] p-3 w-full rounded-xl transition shadow-[inset_0_-2px_1px_rgba(0,0,0,0.05),inset_0_1px_1px_rgba(255,255,255,1)]"
-							: "flex items-center text-[#6f767e] bg-white p-3 w-full rounded-xl transition hover:text-[#1a1d1f] hover:bg-[#efefef] hover:shadow-[inset_0_-2px_1px_rgba(0,0,0,0.05),inset_0_1px_1px_rgba(255,255,255,1)]"
+							: "flex items-center text-[#6f767e] bg-transparent p-3 w-full rounded-xl transition hover:text-[#1a1d1f] hover:bg-[#efefef] hover:shadow-[inset_0_-2px_1px_rgba(0,0,0,0.05),inset_0_1px_1px_rgba(255,255,255,1)]"
 					}`;
 				}}
 				to={link}
@@ -57,7 +57,7 @@ const SidebarMenuItem: React.FC<SidebarMenuItemType> = ({
 				<CSSTransition
 					in={isActive}
 					timeout={300}
-					classNames="slide-menu"
+					classNames="slide-x"
 					unmountOnExit
 				>
 					<ul className="pl-7 pt-2 sub-menu">

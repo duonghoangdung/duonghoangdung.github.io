@@ -64,13 +64,13 @@ const Sidebar = ({ ...props}) => {
 						<SVGIcon name="close" w={24} h={24} />
 					</button>
 				</div>
-				<div className="flex flex-col p-6 h-full w-full">
+				<div className="flex flex-col p-6 h-full w-full overflow-y-auto">
 					<div className="mb-12 hidden md:block">
 						<a href="/">
 							<div className="w-[48px] h-[48px] overflow-hidden relative">
 								<img
 									className="absolute top-0 left-0 w-full h-full object-contain"
-									src="//via.placeholder.com/48x48.png"
+									src="https://via.placeholder.com/48x48.png"
 									alt=""
 								/>
 							</div>

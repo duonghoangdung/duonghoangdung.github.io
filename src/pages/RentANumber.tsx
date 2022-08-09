@@ -2,6 +2,7 @@ import React from "react";
 import AppCard from "../components/AppCard";
 import Card from "../components/Card";
 import Input from "../components/Input";
+import Popper from "../components/Popper";
 import SearchInput from "../components/SearchInput";
 import SVGIcon from "../components/SVGIcon";
 
@@ -62,7 +63,9 @@ const RentANumber = () => {
 					</div>
 					<div className="text-sm font-medium text-[#6f767e] mb-3">Select to buy</div>
 					<div className="grid grid-cols-2 gap-2">
-						{apps.map(({ name, image, description}, index) => <AppCard key={index} name={name} image={image} description={description} />)}
+						{apps.map(({ name, image, description}, index) => (
+							<Popper content={name}><a href="#"><AppCard key={index} name={name} image={image} description={description} /></a></Popper>
+						))}
 					</div>
 				</Card>
 			</div>

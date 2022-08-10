@@ -107,6 +107,50 @@
 	}
 }
 
+.modal-backdrop-transition {
+	&-enter {
+		opacity: 0;
+	}
+
+	&-enter-active {
+		opacity: 1;
+		transition: opacity .3s ease-in-out;
+	}
+
+	&-exit {
+		opacity: 1;
+	}
+
+	&-exit-active {
+		opacity: 0;
+		transition: opacity .3s ease-in-out;
+	}
+}
+
+.modal-transition {
+	&-enter {
+		opacity: 0;
+		max-height: 0;
+	}
+
+	&-enter-active {
+		opacity: 1;
+		max-height: 100rem;
+		transition: max-height .3s ease-in-out, opacity .3s ease-in-out;
+	}
+
+	&-exit {
+		opacity: 1;
+		max-height: 100rem;
+	}
+
+	&-exit-active {
+		opacity: 0;
+		max-height: 0;
+		transition: max-height .3s ease-in-out, opacity .3s ease-in-out;
+	}
+}
+
 .slide-x {
 	&-enter {
 		opacity: 0;

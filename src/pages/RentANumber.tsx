@@ -5,6 +5,8 @@ import Input from "../components/Input";
 import Popper from "../components/Popper";
 import SearchInput from "../components/SearchInput";
 import SVGIcon from "../components/SVGIcon";
+import CodesTableRow from "../components/Table/CodesTableRow"
+import CodesTableRowAlt from "../components/Table/CodesTableRowAlt";
 
 const RentANumber = () => {
 	const apps = [
@@ -49,13 +51,13 @@ const RentANumber = () => {
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-3">
 						<div className="col-span-1">
 							<label className="inline-block text-sm font-semibold text-[#33383f] mb-3">Carrier</label>
-							<select className="border-2 border-[#efefef] rounded-xl w-full bg-[#fcfcfc] px-3 py-2">
+							<select className="text-sm font-semibold text-[#1a1d1f] border-2 border-[#efefef] rounded-xl w-full bg-[#fcfcfc] p-3 h-[48px]">
 								<option>All</option>
 							</select>
 						</div>
 						<div className="col-span-1">
 							<label className="inline-block text-sm font-semibold text-[#33383f] mb-3">Prefix</label>
-							<input type="text" placeholder="Ex:0399,0935" className="border-2 border-[#efefef] rounded-xl w-full bg-[#fcfcfc] px-3 py-2" />
+							<input type="text" placeholder="Ex:0399,0935" className="text-sm font-semibold text-[#1a1d1f] border-2 border-[#efefef] rounded-xl w-full bg-[#fcfcfc] p-3 h-[48px]" />
 						</div>
 						<div className="col-span-1 md:col-span-2">
 							<SearchInput />
@@ -64,7 +66,7 @@ const RentANumber = () => {
 					<div className="text-sm font-medium text-[#6f767e] mb-3">Select to buy</div>
 					<div className="grid grid-cols-2 gap-2">
 						{apps.map(({ name, image, description}, index) => (
-							<Popper content={name}><a href="#"><AppCard key={index} name={name} image={image} description={description} /></a></Popper>
+							<Popper content={name} key={index}><a href="#"><AppCard name={name} image={image} description={description}/></a></Popper>
 						))}
 					</div>
 				</Card>
@@ -91,16 +93,6 @@ const RentANumber = () => {
 							<tbody className="text-sm font-normal text-[#1a1d1f]">
 								<tr>
 									<td className="border-b border-[#efefef] p-4 text-center">
-										<a
-											className="flex items-center justify-center text-[#6f767e] border border-[#efefef] rounded w-[32px] h-[32px]"
-											href="#12312"
-										>
-											<SVGIcon
-												name="table-expand-arrow-left"
-												w={24}
-												h={24}
-											/>
-										</a>
 									</td>
 									<td className="border-b border-[#efefef] p-4 text-center">
 										1
@@ -123,11 +115,13 @@ const RentANumber = () => {
 										2022-06-29 09:29:55
 									</td>
 								</tr>
+								<CodesTableRow />
+								<CodesTableRowAlt />
 							</tbody>
 						</table>
 					</div>
 					<div className="text-center">
-						<SVGIcon name="nodata"/>
+						<SVGIcon name="nodata" w={224} h={251}/>
 					</div>
 				</Card>
 			</div>

@@ -23,7 +23,7 @@ const Button = React.forwardRef<HTMLButtonElement, Props>(
 				btnClass += ' text-[13px] px-4 py-2 rounded-lg';
 				break;
 			default:
-				btnClass += ' text-[15px] px-5 py-3 rounded-xl';
+				btnClass += ' text-[15px] px-5 py-3 rounded-xl h-[48px]';
 				break;
 		}
 		return (

@@ -50,7 +50,6 @@ const AccountInformation = () => {
 				<div className="col-span-1">
 					<Input id="old_password" name="old_password" type="password" label="Old password"/>
 				</div>
-				<div className="hidden lg:block col-span-1"></div>
 				<div className="col-span-1">
 					<Input id="new_password" name="new_password" type="password" label="New password"/>
 				</div>

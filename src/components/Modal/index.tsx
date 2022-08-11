@@ -20,7 +20,7 @@ const Modal:React.FC<Props> = ({ title, children, open, onClose, onConfirm, ...p
     			classNames="modal-backdrop-transition"
                 unmountOnExit
     		>
-            <div className="fixed inset-0 bg-black/40 z-40 transition"></div>
+            <div className="fixed inset-0 bg-black/40 z-40 transition" onClick={onClose}></div>
             </CSSTransition>
             <CSSTransition
     			in={open}
@@ -28,7 +28,7 @@ const Modal:React.FC<Props> = ({ title, children, open, onClose, onConfirm, ...p
     			classNames="modal-transition"
                 unmountOnExit
     		>
-                <div className="flex items-center justify-center fixed inset-0 z-50 overflow-x-auto max-h-screen transition">
+                <div className="flex items-center justify-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 overflow-x-auto max-h-screen transition">
                     <div className="bg-[#fcfcfc] p-6 shadow rounded-2xl w-full max-w-[340px]">
                         <div className="border-b border-[#efefef] pb-6 mb-6">
                             <div className="flex items-center relative text-xl font-semibold text-[#1a1d1f] pl-8 ">

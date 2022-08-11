@@ -4,6 +4,7 @@ import Card from "../components/Card";
 import Input from "../components/Input";
 import Popper from "../components/Popper";
 import SearchInput from "../components/SearchInput";
+import Select from "../components/Select";
 import SVGIcon from "../components/SVGIcon";
 import CodesTableRow from "../components/Table/CodesTableRow"
 import CodesTableRowAlt from "../components/Table/CodesTableRowAlt";
@@ -51,13 +52,12 @@ const RentANumber = () => {
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-3">
 						<div className="col-span-1">
 							<label className="inline-block text-sm font-semibold text-[#33383f] mb-3">Carrier</label>
-							<select className="text-sm font-semibold text-[#1a1d1f] border-2 border-[#efefef] rounded-xl w-full bg-[#fcfcfc] p-3 h-[48px]">
+							<Select className="w-full">
 								<option>All</option>
-							</select>
+							</Select>
 						</div>
 						<div className="col-span-1">
-							<label className="inline-block text-sm font-semibold text-[#33383f] mb-3">Prefix</label>
-							<input type="text" placeholder="Ex:0399,0935" className="text-sm font-semibold text-[#1a1d1f] border-2 border-[#efefef] rounded-xl w-full bg-[#fcfcfc] p-3 h-[48px]" />
+							<Input label="Prefix" placeholder="Ex:0399,0935" inputStyle="outline"/>
 						</div>
 						<div className="col-span-1 md:col-span-2">
 							<SearchInput />

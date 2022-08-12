@@ -30,20 +30,22 @@ const Pagination: React.FC<Props> = ({
   const totalPage = Math.ceil(total / perPage)
   return (
     <div className={`flex justify-between items-center mt-5 ${className}`} {...props}>
-      {!!perPageOptions?.length && <div>
-        <span className='text-xs font-semibold mr-3'>Show</span>
-        <select
-          className='text-xs font-semibold border-2 border-[#effefef] px-3 py-1 rounded-sm'
-          value={perPage}
-          onChange={(e) => setPerPage(Number(e.currentTarget.value))}
-        >
-          {perPageOptions?.map(({ value, name }) => (
-            <option value={value} key={value} selected={perPage == value}>
-              {name}
-            </option>
-          ))}
-        </select>
-      </div>}
+      {!!perPageOptions?.length && (
+        <div>
+          <span className='text-xs font-semibold mr-3'>Show</span>
+          <select
+            className='text-xs font-semibold border-2 border-[#effefef] px-3 py-1 rounded-sm'
+            value={perPage}
+            onChange={(e) => setPerPage(Number(e.currentTarget.value))}
+          >
+            {perPageOptions?.map(({ value, name }) => (
+              <option value={value} key={value} selected={perPage == value}>
+                {name}
+              </option>
+            ))}
+          </select>
+        </div>
+      )}
       <div className='text-xs font-bold text-[#6f767e] flex flex-wrap justify-center gap-2 items-center'>
         <div
           className={`flex items-center justify-center border border-[#efefef] rounded-sm w-6 h-6 transition${
@@ -65,7 +67,9 @@ const Pagination: React.FC<Props> = ({
         ))}
         <div
           className={`flex items-center justify-center border border-[#efefef] rounded-sm w-6 h-6 transition${
-            currentPage >= totalPage ? '' : ' cursor-pointer hover:border-[#1a1d1f] hover:text-[#1a1d1f]'
+            currentPage >= totalPage
+              ? ''
+              : ' cursor-pointer hover:border-[#1a1d1f] hover:text-[#1a1d1f]'
           }`}
           onClick={onPrevClick}
         >

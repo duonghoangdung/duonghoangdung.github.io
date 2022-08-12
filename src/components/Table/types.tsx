@@ -5,7 +5,7 @@ type ColumnType = {
 }
 
 type RowType = {
-  [key: string]: boolean
+  [key: string]: string
 }
 
 export type { ColumnType, RowType }

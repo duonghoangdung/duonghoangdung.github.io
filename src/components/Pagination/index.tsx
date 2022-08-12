@@ -29,7 +29,7 @@ const Pagination: React.FC<Props> = ({
   const [perPage, setPerPage] = useState<number>(10)
   const totalPage = Math.ceil(total / perPage)
   return (
-    <div className={`flex justify-between items-center mt-5 ${className}`} {...props}>
+    <div className={`flex justify-between items-center mt-5 w-full ${className}`} {...props}>
       {!!perPageOptions?.length && (
         <div>
           <span className='text-xs font-semibold mr-3'>Show</span>

@@ -83,7 +83,16 @@ const BalanceLog: React.FC = () => {
       </div>
       <div className='overflow-x-auto'>
         <Table columns={columns} data={data} />
-        <Pagination total={40} />
+        <Pagination perPageOptions={[
+          {
+            name: '10/page',
+            value: 10
+          },
+          {
+            name: '20/page',
+            value: 20
+          }
+        ]} total={40} />
       </div>
     </Card>
   )

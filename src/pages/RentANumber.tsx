@@ -92,9 +92,9 @@ const RentANumber = () => {
               </thead>
               <tbody className='text-sm font-normal text-[#1a1d1f]'>
                 <tr>
-                  <td className='border-b border-[#efefef] p-4 text-center'></td>
-                  <td className='border-b border-[#efefef] p-4 text-center'>1</td>
-                  <td className='border-b border-[#efefef] p-4 text-left'>
+                  <td className='border-b border-[#efefef] p-4 text-center min-w-[50px]'></td>
+                  <td className='border-b border-[#efefef] p-4 text-center min-w-[50px]'>1</td>
+                  <td className='border-b border-[#efefef] p-4 text-left min-w-[200px]'>
                     <AppCard
                       name='Tinder'
                       image='//via.placeholder.com/40x40.png'
@@ -102,14 +102,14 @@ const RentANumber = () => {
                       className='bg-transparent p-0'
                     />
                   </td>
-                  <td className='border-b border-[#efefef] p-4 text-center'>
+                  <td className='border-b border-[#efefef] p-4 text-center min-w-[60px]'>
                     <span className='font-semibold text-[#83bf6e] px-2 py-1 bg-[#eafae4] rounded'>
                       Active
                     </span>
                   </td>
-                  <td className='border-b border-[#efefef] p-4 text-center'>098779736</td>
-                  <td className='border-b border-[#efefef] p-4 text-center'>8884642</td>
-                  <td className='border-b border-[#efefef] p-4 text-center'>2022-06-29 09:29:55</td>
+                  <td className='border-b border-[#efefef] p-4 text-center min-w-[140px]'>098779736</td>
+                  <td className='border-b border-[#efefef] p-4 text-center min-w-[100px]'>8884642</td>
+                  <td className='border-b border-[#efefef] p-4 text-center min-w-[200px]'>2022-06-29 09:29:55</td>
                 </tr>
                 <CodesTableRow />
                 <CodesTableRowAlt />

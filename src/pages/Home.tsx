@@ -1,39 +1,14 @@
 import React from 'react'
 import Card from '../components/Card'
-import Table, { ColumnType, RowType } from '../components/Table'
 import { Chart as ChartJS, ArcElement, Tooltip } from 'chart.js'
 import { Doughnut } from 'react-chartjs-2'
 import Pagination from '../components/Pagination'
+import HomeDetailTableRow from '../components/HomeDetailTableRow'
+import SVGIcon from '../components/SVGIcon'
 
 ChartJS.register(ArcElement, Tooltip)
 
 const Home = () => {
-  const columns: ColumnType[] = [
-    {
-      label: '#',
-      accessor: 'stt',
-    },
-    {
-      label: 'App',
-      accessor: 'app',
-    },
-    {
-      label: 'Done',
-      accessor: 'done',
-    },
-    {
-      label: 'Expired',
-      accessor: 'expired',
-    },
-  ]
-  const data: RowType[] = [
-    {
-      stt: '1',
-      app: 'Tinder',
-      done: '100.000',
-      expired: '123',
-    },
-  ]
   const dataChart = {
     labels: ['Facebook', 'Tinder', 'Tinder', 'Tinder', 'Tinder', 'Microsoft/hotmail/outlook'],
     datasets: [
@@ -151,9 +126,46 @@ const Home = () => {
           </div>
         </Card>
         <Card title='Detail' cardStyle='ffbc99'>
+          <div className='flex md:hidden items-center bg-[#efefef] rounded-xl p-3 h-[48px] mb-5'>
+            <div className='text-sm font-semibold text-[#6f767e]'>Sort by:</div>
+            <select className='grow text-sm font-semibold text-[#1a1d1f] bg-transparent focus-visible:outline-none'>
+              <option value="0">None</option>
+            </select>
+          </div>
           <div className='overflow-x-auto'>
-            <Table columns={columns} data={data} />
-            <Pagination total={40} />
+            <table className='w-full'>
+              <thead className='text-sm font-semibold text-[#6f767e] hidden md:table-header-group'>
+                <tr>
+                  <th className='border-b border-[#efefef] hidden md:table-cell text-left px-5 py-4'>#</th>
+                  <th className='border-b border-[#efefef] text-left px-5 py-4'>App</th>
+                  <th className='border-b border-[#efefef] hidden md:table-cell text-center px-5 py-4'>Done</th>
+                  <th className='border-b border-[#efefef] hidden md:table-cell text-right px-5 py-4'>Expired</th>
+                </tr>
+              </thead>
+              <tbody className='text-sm font-normal text-[#1a1d1f]'>
+                <HomeDetailTableRow/>
+                <HomeDetailTableRow/>
+                <HomeDetailTableRow/>
+                <HomeDetailTableRow/>
+              </tbody>
+            </table>
+          </div>
+          <div className="hidden md:flex">
+            <Pagination perPageOptions={[
+              {
+                name: '10/page',
+                value: 10
+              },
+              {
+                name: '20/page',
+                value: 20
+              }
+            ]} total={40}/>
+          </div>
+          <div className='flex md:hidden items-center justify-center mt-5'>
+            <button className='text-sm font-bold text-[#1a1d1f] inline-flex items-center border border-[#efefef] rounded-xl px-5 py-3'>
+              <SVGIcon name="loadmore" w={24} h={24} className="mr-2"/>
+              <span>Load more</span></button>
           </div>
         </Card>
       </div>

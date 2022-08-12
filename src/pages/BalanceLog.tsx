@@ -62,20 +62,20 @@ const BalanceLog: React.FC = () => {
   return (
     <Card title='Log'>
       <div className='grid grid-cols-6 items-center gap-2 overflow-x-auto'>
-        <div className='col-span-3'>
+        <div className='col-span-6 lg:col-span-3'>
           <SearchInput />
         </div>
-        <div className='col-span-1'>
+        <div className='col-span-6 lg:col-span-1'>
           <Select className='w-full'>
             <option value=''>All Status</option>
           </Select>
         </div>
-        <div className='col-span-1'>
+        <div className='col-span-6 lg:col-span-1'>
           <Select className='w-full'>
             <option value=''>Last 28 days</option>
           </Select>
         </div>
-        <div className='col-span-1'>
+        <div className='col-span-6 lg:col-span-1'>
           <Button buttonStyle='primary' className='w-full'>
             Search
           </Button>

@@ -27,7 +27,7 @@ const AccountInformation = () => {
               <div className='text-sm font-semibold text-[#1a1d1f]'>1,673.51 đ</div>
             </div>
             <div className='col-span-1'></div>
-            <div className='col-span-1 mt-3'>
+            <div className='col-span-1 sm:col-span-2 md:col-span-4 mt-3'>
               <Button type='button' onClick={() => setShowModal(true)}>
                 Update password
               </Button>

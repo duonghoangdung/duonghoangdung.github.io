@@ -1,34 +1,34 @@
-import React from "react";
-import Card from "../components/Card";
-import Table, { ColumnType, RowType } from "../components/Table";
+import React from 'react';
+import Card from '../components/Card';
+import Table, { ColumnType, RowType } from '../components/Table';
 import { Chart as ChartJS, ArcElement, Tooltip } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
-import Pagination from "../components/Pagination";
+import Pagination from '../components/Pagination';
 
 ChartJS.register(ArcElement, Tooltip);
 
 const Home = () => {
 	const columns:ColumnType[] = [
         {
-            label: "#",
-            accessor: "stt"
+            label: '#',
+            accessor: 'stt'
         },
         {
-            label: "App",
-            accessor: "app"
+            label: 'App',
+            accessor: 'app'
         },
         {
-            label: "Done",
-            accessor: "done"
+            label: 'Done',
+            accessor: 'done'
         },
         {
-            label: "Expired",
-            accessor: "expired"
+            label: 'Expired',
+            accessor: 'expired'
         }
     ]; 
     const data:RowType[] = [
         {
-			stt: "1",
+			stt: '1',
 			app: 'Tinder',
 			done: '100.000',
 			expired: '123'
@@ -198,7 +198,7 @@ const Home = () => {
 				>
 					<div className="overflow-x-auto">
 						<Table columns={columns} data={data} />
-						<Pagination />
+						<Pagination total={40}/>
 					</div>
 				</Card>
 			</div>

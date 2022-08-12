@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
-import SVGIcon from "../SVGIcon";
+import SVGIcon from '../SVGIcon';
 
 interface Props {
     title: string,

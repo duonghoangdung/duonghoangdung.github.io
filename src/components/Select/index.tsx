@@ -1,7 +1,6 @@
 import React from 'react';
 
-interface Props extends React.InputHTMLAttributes<HTMLSelectElement> {
-}
+type Props = React.InputHTMLAttributes<HTMLSelectElement>
 
 const Input = React.forwardRef<HTMLSelectElement, Props> (({children, className, ...props}, ref) => {
     return (
@@ -10,5 +9,7 @@ const Input = React.forwardRef<HTMLSelectElement, Props> (({children, className,
         </select>
     )
 });
+
+Input.displayName = 'Input';
 
 export default Input;

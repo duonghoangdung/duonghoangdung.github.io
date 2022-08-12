@@ -1,5 +1,5 @@
-import React from "react";
-import type { ColumnType } from "./types";
+import React from 'react';
+import type { ColumnType } from './types';
 
 type Props = {
 	columns: Array<ColumnType>

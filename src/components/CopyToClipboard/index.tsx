@@ -1,16 +1,16 @@
-import React, { useState, createRef, useRef } from "react";
+import React, { useState } from 'react';
 import copy from 'copy-to-clipboard';
 import { usePopper } from 'react-popper';
 
 interface ChildProps {
-	copy: (content: any) => void;
-    setReferenceElement: (content: any) => void;
+	copy: (content: string) => void;
+    setReferenceElement: (content: HTMLElement | null) => void;
 }
 interface Props {
-	children: (props: ChildProps) => React.ReactElement<any>;
+	children: (props: ChildProps) => React.ReactElement;
 }
 
-const  CopyToClipboard:React.FC<Props> = ({ children, ...props}) => {
+const CopyToClipboard:React.FC<Props> = ({ children }) => {
     const [showTooltip, setShowTooltip] = useState(false);
     const [popperElement, setPopperElement] = useState<HTMLElement | null>(null);
     const [referenceElement, setReferenceElement] = useState<HTMLElement | null>(null);
@@ -52,4 +52,4 @@ const  CopyToClipboard:React.FC<Props> = ({ children, ...props}) => {
     )
 }
 
-export default CopyToClipboard;
+export default CopyToClipboard;

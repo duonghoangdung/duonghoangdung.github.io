@@ -1,7 +1,7 @@
-import React from "react";
-import TableBody from "./TableBody";
-import TableHead from "./TableHead";
-import type { ColumnType, RowType } from "./types";
+import React from 'react';
+import TableBody from './TableBody';
+import TableHead from './TableHead';
+import type { ColumnType, RowType } from './types';
 
 type Props = {
 	data: Array<RowType>;

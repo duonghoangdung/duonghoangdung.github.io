@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import AppCard from "../AppCard";
-import SVGIcon from "../SVGIcon";
+import React, { useState } from 'react';
+import AppCard from '../AppCard';
+import SVGIcon from '../SVGIcon';
 import { CSSTransition } from 'react-transition-group';
 
 const CodesTableRowAlt = () => {

@@ -1,7 +1,6 @@
-import React from "react";
-import Card from "../components/Card";
-import CopyToClipboard from "../components/CopyToClipboard";
-import Pagination from "../components/Pagination";
+import Card from '../components/Card';
+import CopyToClipboard from '../components/CopyToClipboard';
+import Pagination from '../components/Pagination';
 
 const Addfund = () => {
 	return (
@@ -21,15 +20,15 @@ const Addfund = () => {
 									<div className="text-[#6f767e] mb-2">Account number</div>
 									<div className="text-[#1a1d1f]">1019556601 
 										<CopyToClipboard>
-											{({ copy, setReferenceElement }) => <button ref={setReferenceElement} onClick={() => copy("1019556601")} className="text-[#2a85ff] hover:opacity-75 transition-opacity ml-2">Copy</button>}
+											{({ copy, setReferenceElement }) => <button ref={setReferenceElement} onClick={() => copy('1019556601')} className="text-[#2a85ff] hover:opacity-75 transition-opacity ml-2">Copy</button>}
 										</CopyToClipboard>
 									</div>
 								</div>
 								<div>
-									<div className="text-[#6f767e] mb-2">Account owner's name</div>
+									<div className="text-[#6f767e] mb-2">Account owner&apos;s name</div>
 									<div className="text-[#1a1d1f]">HA TRI TAM
 										<CopyToClipboard>
-											{({ copy, setReferenceElement }) => <button ref={setReferenceElement} onClick={() => copy("HA TRI TAM")} className="text-[#2a85ff] hover:opacity-75 transition-opacity ml-2">Copy</button>}
+											{({ copy, setReferenceElement }) => <button ref={setReferenceElement} onClick={() => copy('HA TRI TAM')} className="text-[#2a85ff] hover:opacity-75 transition-opacity ml-2">Copy</button>}
 										</CopyToClipboard>
 									</div>
 								</div>
@@ -37,7 +36,7 @@ const Addfund = () => {
 									<div className="text-[#6f767e] mb-2">Transaction content</div>
 									<div className="text-[#1a1d1f]">CTSC 0399900661 
 										<CopyToClipboard>
-											{({ copy, setReferenceElement }) => <button ref={setReferenceElement} onClick={() => copy("1019556601")} className="text-[#2a85ff] hover:opacity-75 transition-opacity ml-2">Copy</button>}
+											{({ copy, setReferenceElement }) => <button ref={setReferenceElement} onClick={() => copy('1019556601')} className="text-[#2a85ff] hover:opacity-75 transition-opacity ml-2">Copy</button>}
 										</CopyToClipboard>
 									</div>
 								</div>
@@ -195,7 +194,7 @@ const Addfund = () => {
 							</tr>
 						</tbody>
 					</table>
-					<Pagination />
+					<Pagination total={40}/>
 				</Card>
 			</div>
 			<div className="col-span-1">

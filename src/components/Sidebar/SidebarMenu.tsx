@@ -1,6 +1,6 @@
-import React from "react";
-import SidebarMenuItem from "../SidebarMenuItem";
-import { SidebarMenuItemType } from "../SidebarMenuItem/types";
+import React from 'react';
+import SidebarMenuItem from '../SidebarMenuItem';
+import { SidebarMenuItemType } from '../SidebarMenuItem/types';
 
 interface Props {
 	menu: Array<SidebarMenuItemType>;

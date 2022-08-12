@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import * as PopperJS from '@popperjs/core';
-import { usePopper } from "react-popper";
+import { usePopper } from 'react-popper';
 
 
 interface Props {
@@ -21,7 +21,7 @@ const Popper: React.FC<Props> = ({ children, content, placement, ...props }) => 
         placement: placement || 'top',
         modifiers: [
             {
-                name: "arrow",
+                name: 'arrow',
                 options: {
                     element: arrowElement
                 }

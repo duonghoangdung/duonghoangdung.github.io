@@ -1,5 +1,5 @@
 export enum SidebarActionKind {
-	TOGGLE = "TOGGLE",
+	TOGGLE = 'TOGGLE',
 }
 
 interface ActionType {

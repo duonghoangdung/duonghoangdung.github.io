@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import SVGIcon from "../SVGIcon";
+import React, { useState } from 'react';
+import SVGIcon from '../SVGIcon';
 
 type SelectType = {
 	name: string;
@@ -16,7 +16,7 @@ interface Props {
 const SelectDropdown: React.FC<Props> = ({
 	options,
 	value,
-	placeholder = "Please choose an option.",
+	placeholder = 'Please choose an option.',
     onSelect,
 	...props
 }) => {

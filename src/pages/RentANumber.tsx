@@ -1,13 +1,13 @@
-import React from "react";
-import AppCard from "../components/AppCard";
-import Card from "../components/Card";
-import Input from "../components/Input";
-import Popper from "../components/Popper";
-import SearchInput from "../components/SearchInput";
-import Select from "../components/Select";
-import SVGIcon from "../components/SVGIcon";
-import CodesTableRow from "../components/Table/CodesTableRow"
-import CodesTableRowAlt from "../components/Table/CodesTableRowAlt";
+import React from 'react';
+import AppCard from '../components/AppCard';
+import Card from '../components/Card';
+import Input from '../components/Input';
+import Popper from '../components/Popper';
+import SearchInput from '../components/SearchInput';
+import Select from '../components/Select';
+import SVGIcon from '../components/SVGIcon';
+import CodesTableRow from '../components/Table/CodesTableRow'
+import CodesTableRowAlt from '../components/Table/CodesTableRowAlt';
 
 const RentANumber = () => {
 	const apps = [

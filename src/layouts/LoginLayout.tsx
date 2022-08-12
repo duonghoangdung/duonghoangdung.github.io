@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 
 interface Props {
 	children?: React.ReactNode;
@@ -8,7 +8,7 @@ interface Props {
 
 const LoginLayout: React.FC<Props> = ({ children, title, className,...props }) => {
 	useEffect(() => {
-		document.title = title || "";
+		document.title = title || '';
 	}, [title]);
 
 	return (

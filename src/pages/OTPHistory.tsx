@@ -1,7 +1,7 @@
-import React from "react";
-import AppCard from "../components/AppCard";
-import Card from "../components/Card";
-import Pagination from "../components/Pagination";
+import React from 'react';
+import AppCard from '../components/AppCard';
+import Card from '../components/Card';
+import Pagination from '../components/Pagination';
 
 const OTPHistory = () => {
 	return (
@@ -109,7 +109,7 @@ const OTPHistory = () => {
 						</tr>
 					</tbody>
 				</table>
-				<Pagination />
+				<Pagination total={40}/>
 			</div>
 		</Card>
 	);

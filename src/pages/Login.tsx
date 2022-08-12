@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 import loginBg from'../assets/images/login-bg.png';
-import Input from "../components/Input";
-import SwitchBox from "../components/SwitchBox";
+import Input from '../components/Input';
+import SwitchBox from '../components/SwitchBox';
 
 const Login = () => {
     return (

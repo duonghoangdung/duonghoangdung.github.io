@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
-import Marquee from "react-fast-marquee";
-import { SidebarContext } from "./Sidebar/context";
-import { SidebarActionKind } from "./Sidebar/reducer";
-import SVGIcon from "./SVGIcon";
+import React, { useContext } from 'react';
+import Marquee from 'react-fast-marquee';
+import { SidebarContext } from './Sidebar/context';
+import { SidebarActionKind } from './Sidebar/reducer';
+import SVGIcon from './SVGIcon';
 
 const Topbar = ({...props}) => {
 	

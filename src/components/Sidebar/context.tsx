@@ -1,5 +1,5 @@
-import React, { createContext, FC, useReducer } from "react"
-import { reducer, initialState, StateType, ActionType } from "./reducer"
+import React, { createContext, FC, useReducer } from 'react'
+import { reducer, initialState, StateType, ActionType } from './reducer'
 
 interface SidebarContextInterface {
     state: StateType;

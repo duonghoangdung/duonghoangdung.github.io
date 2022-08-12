@@ -10,28 +10,28 @@ import Table, { ColumnType, RowType } from '../components/Table';
 const BalanceLog:React.FC = () => {
     const columns:ColumnType[] = [
         {
-            label: "#",
-            accessor: "stt"
+            label: '#',
+            accessor: 'stt'
         },
         {
-            label: "Transaction type",
-            accessor: "transaction_type"
+            label: 'Transaction type',
+            accessor: 'transaction_type'
         },
         {
-            label: "Substance",
-            accessor: "substance"
+            label: 'Substance',
+            accessor: 'substance'
         },
         {
-            label: "Price",
-            accessor: "price"
+            label: 'Price',
+            accessor: 'price'
         },
         {
-            label: "Volatility",
-            accessor: "volatility"
+            label: 'Volatility',
+            accessor: 'volatility'
         },
         {
-            label: "Date",
-            accessor: "date"
+            label: 'Date',
+            accessor: 'date'
         }
     ]; 
     const data:RowType[] = [
@@ -82,7 +82,7 @@ const BalanceLog:React.FC = () => {
             </div>
             <div className='overflow-x-auto'>
                 <Table columns={columns} data={data}/>
-                <Pagination />
+                <Pagination total={40}/>
             </div>
         </Card>
     )

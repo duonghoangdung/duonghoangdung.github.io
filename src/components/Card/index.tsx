@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 type Props = {
     children?: React.ReactNode;
@@ -12,21 +12,21 @@ const Card: React.FC<Props> = ({ children, title, cardStyle, ...props }) => {
     let titleTagColor = 'bg-[#cabdff]';
     switch (cardStyle) {
         case 'note':
-            backgroundColor = "bg-[#ffbc99]";
-            backgroundOpacity = "bg-opacity-25";
-            titleTagColor = "bg-[#ffbc99]";
+            backgroundColor = 'bg-[#ffbc99]';
+            backgroundOpacity = 'bg-opacity-25';
+            titleTagColor = 'bg-[#ffbc99]';
             break;
         case 'b5e4ca':
-            titleTagColor = "bg-[#b5e4ca]";
+            titleTagColor = 'bg-[#b5e4ca]';
             break;
         case 'ffbc99':
-            titleTagColor = "bg-[#ffbc99]";
+            titleTagColor = 'bg-[#ffbc99]';
             break;
         case 'b1e5fc':
-            titleTagColor = "bg-[#b1e5fc]";
+            titleTagColor = 'bg-[#b1e5fc]';
             break;
         case 'cabdff':
-            titleTagColor = "bg-[#cabdff]";
+            titleTagColor = 'bg-[#cabdff]';
             break;
         default:
             break;

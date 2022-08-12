@@ -1,7 +1,7 @@
-import React from "react";
-import Button from "../Button";
-import SVGIcon from "../SVGIcon";
-import { CSSTransition } from "react-transition-group";
+import React from 'react';
+import Button from '../Button';
+import SVGIcon from '../SVGIcon';
+import { CSSTransition } from 'react-transition-group';
 
 interface Props {
     title: string;
@@ -32,7 +32,7 @@ const Modal:React.FC<Props> = ({ title, children, open, onClose, onConfirm, ...p
                     <div className="bg-[#fcfcfc] p-6 shadow rounded-2xl w-full max-w-[340px]">
                         <div className="border-b border-[#efefef] pb-6 mb-6">
                             <div className="flex items-center relative text-xl font-semibold text-[#1a1d1f] pl-8 ">
-                                <div className={`absolute top-0 left-0 h-full w-4 bg-[#ffbc99] rounded`}></div>
+                                <div className={'absolute top-0 left-0 h-full w-4 bg-[#ffbc99] rounded'}></div>
                                 <span className="grow">{title}</span>
                                 <button type="button" onClick={onClose}>
                                     <SVGIcon className="ml-6" name="modal-close" w={36} h={36}></SVGIcon>

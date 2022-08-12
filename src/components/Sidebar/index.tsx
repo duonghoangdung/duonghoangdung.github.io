@@ -1,54 +1,54 @@
-import React, { useContext } from "react";
-import { CSSTransition } from "react-transition-group";
+import React, { useContext } from 'react';
+import { CSSTransition } from 'react-transition-group';
 import { SidebarContext } from './context';
 import { SidebarActionKind } from './reducer';
-import SwitchBox from "../SwitchBox";
-import SidebarMenu from "./SidebarMenu";
-import SVGIcon from "../SVGIcon";
+import SwitchBox from '../SwitchBox';
+import SidebarMenu from './SidebarMenu';
+import SVGIcon from '../SVGIcon';
 
 const Sidebar = ({ ...props}) => {
 	const { state, dispatch } = useContext(SidebarContext);
 
 	const menu = [
 		{
-			text: "Home",
-			link: "/",
-			icon: "home",
+			text: 'Home',
+			link: '/',
+			icon: 'home',
 		},
 		{
-			text: "OTP",
-			link: "/otp",
-			icon: "sim",
+			text: 'OTP',
+			link: '/otp',
+			icon: 'sim',
 			children: [
 				{
-					text: "Rent A Number",
-					link: "/rent-a-number",
+					text: 'Rent A Number',
+					link: '/rent-a-number',
 				},
 				{
-					text: "OTP History",
-					link: "/otp-history",
+					text: 'OTP History',
+					link: '/otp-history',
 				},
 			],
 		},
 		{
-			text: "Account Infomation",
-			link: "/account-information",
-			icon: "profile",
+			text: 'Account Infomation',
+			link: '/account-information',
+			icon: 'profile',
 		},
 		{
-			text: "Addfund",
-			link: "/addfund",
-			icon: "bank",
+			text: 'Addfund',
+			link: '/addfund',
+			icon: 'bank',
 		},
 		{
-			text: "Balance Log",
-			link: "/balance-log",
-			icon: "wallet",
+			text: 'Balance Log',
+			link: '/balance-log',
+			icon: 'wallet',
 		},
 		{
-			text: "API Document",
-			link: "/api-document",
-			icon: "web-development",
+			text: 'API Document',
+			link: '/api-document',
+			icon: 'web-development',
 		},
 	];
 

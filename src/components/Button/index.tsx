@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	children?: React.ReactNode,
@@ -37,5 +37,7 @@ const Button = React.forwardRef<HTMLButtonElement, Props>(
 		);
 	}
 );
+
+Button.displayName = 'Button';
 
 export default Button;

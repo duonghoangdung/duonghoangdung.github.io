@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import Button from "../components/Button";
-import Input from "../components/Input";
-import Modal from "../components/Modal";
+import React, { useState } from 'react';
+import Button from '../components/Button';
+import Input from '../components/Input';
+import Modal from '../components/Modal';
 
 const AccountInformation = () => {
 	const [showModal, setShowModal] = useState<boolean>(true);

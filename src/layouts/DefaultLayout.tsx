@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
-import Sidebar from "../components/Sidebar";
-import { SidebarProvider } from "../components/Sidebar/context";
-import Topbar from "../components/Topbar";
+import React, { useEffect } from 'react';
+import Sidebar from '../components/Sidebar';
+import { SidebarProvider } from '../components/Sidebar/context';
+import Topbar from '../components/Topbar';
 
 interface Props {
 	children?: React.ReactNode;
@@ -11,7 +11,7 @@ interface Props {
 const DefaultLayout: React.FC<Props> = ({ children, title, ...props }) => {
 
 	useEffect(() => {
-		document.title = title || "";
+		document.title = title || '';
 	}, [title]);
 
 	return (

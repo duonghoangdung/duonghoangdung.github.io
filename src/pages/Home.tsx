@@ -129,43 +129,53 @@ const Home = () => {
           <div className='flex md:hidden items-center bg-[#efefef] rounded-xl p-3 h-[48px] mb-5'>
             <div className='text-sm font-semibold text-[#6f767e]'>Sort by:</div>
             <select className='grow text-sm font-semibold text-[#1a1d1f] bg-transparent focus-visible:outline-none'>
-              <option value="0">None</option>
+              <option value='0'>None</option>
             </select>
           </div>
           <div className='overflow-x-auto'>
             <table className='w-full'>
               <thead className='text-sm font-semibold text-[#6f767e] hidden md:table-header-group'>
                 <tr>
-                  <th className='border-b border-[#efefef] hidden md:table-cell text-left px-5 py-4'>#</th>
+                  <th className='border-b border-[#efefef] hidden md:table-cell text-left px-5 py-4'>
+                    #
+                  </th>
                   <th className='border-b border-[#efefef] text-left px-5 py-4'>App</th>
-                  <th className='border-b border-[#efefef] hidden md:table-cell text-center px-5 py-4'>Done</th>
-                  <th className='border-b border-[#efefef] hidden md:table-cell text-right px-5 py-4'>Expired</th>
+                  <th className='border-b border-[#efefef] hidden md:table-cell text-center px-5 py-4'>
+                    Done
+                  </th>
+                  <th className='border-b border-[#efefef] hidden md:table-cell text-right px-5 py-4'>
+                    Expired
+                  </th>
                 </tr>
               </thead>
               <tbody className='text-sm font-normal text-[#1a1d1f]'>
-                <HomeDetailTableRow/>
-                <HomeDetailTableRow/>
-                <HomeDetailTableRow/>
-                <HomeDetailTableRow/>
+                <HomeDetailTableRow />
+                <HomeDetailTableRow />
+                <HomeDetailTableRow />
+                <HomeDetailTableRow />
               </tbody>
             </table>
           </div>
-          <div className="hidden md:flex">
-            <Pagination perPageOptions={[
-              {
-                name: '10/page',
-                value: 10
-              },
-              {
-                name: '20/page',
-                value: 20
-              }
-            ]} total={40}/>
+          <div className='hidden md:flex'>
+            <Pagination
+              perPageOptions={[
+                {
+                  name: '10/page',
+                  value: 10,
+                },
+                {
+                  name: '20/page',
+                  value: 20,
+                },
+              ]}
+              total={40}
+            />
           </div>
           <div className='flex md:hidden items-center justify-center mt-5'>
             <button className='text-sm font-bold text-[#1a1d1f] inline-flex items-center border border-[#efefef] rounded-xl px-5 py-3'>
-              <SVGIcon name="loadmore" w={24} h={24} className="mr-2"/>
-              <span>Load more</span></button>
+              <SVGIcon name='loadmore' w={24} h={24} className='mr-2' />
+              <span>Load more</span>
+            </button>
           </div>
         </Card>
       </div>

@@ -107,9 +107,15 @@ const RentANumber = () => {
                       Active
                     </span>
                   </td>
-                  <td className='border-b border-[#efefef] p-4 text-center min-w-[140px]'>098779736</td>
-                  <td className='border-b border-[#efefef] p-4 text-center min-w-[100px]'>8884642</td>
-                  <td className='border-b border-[#efefef] p-4 text-center min-w-[200px]'>2022-06-29 09:29:55</td>
+                  <td className='border-b border-[#efefef] p-4 text-center min-w-[140px]'>
+                    098779736
+                  </td>
+                  <td className='border-b border-[#efefef] p-4 text-center min-w-[100px]'>
+                    8884642
+                  </td>
+                  <td className='border-b border-[#efefef] p-4 text-center min-w-[200px]'>
+                    2022-06-29 09:29:55
+                  </td>
                 </tr>
                 <CodesTableRow />
                 <CodesTableRowAlt />

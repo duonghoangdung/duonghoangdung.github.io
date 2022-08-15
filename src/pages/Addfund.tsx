@@ -151,16 +151,19 @@ const Addfund = () => {
               </tr>
             </tbody>
           </table>
-          <Pagination perPageOptions={[
-            {
-              name: '10/page',
-              value: 10
-            },
-            {
-              name: '20/page',
-              value: 20
-            }
-          ]} total={40} />
+          <Pagination
+            perPageOptions={[
+              {
+                name: '10/page',
+                value: 10,
+              },
+              {
+                name: '20/page',
+                value: 20,
+              },
+            ]}
+            total={40}
+          />
         </Card>
       </div>
       <div className='col-span-1'>

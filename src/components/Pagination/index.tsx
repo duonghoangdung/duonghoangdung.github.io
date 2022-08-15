@@ -39,7 +39,7 @@ const Pagination: React.FC<Props> = ({
             onChange={(e) => setPerPage(Number(e.currentTarget.value))}
           >
             {perPageOptions?.map(({ value, name }) => (
-              <option value={value} key={value} selected={perPage == value}>
+              <option value={value} key={value}>
                 {name}
               </option>
             ))}
@@ -60,6 +60,7 @@ const Pagination: React.FC<Props> = ({
             className={`flex items-center justify-center border border-[#efefef] hover:border-[#1a1d1f] rounded-sm w-6 h-6 hover:text-[#1a1d1f] transition${
               currentPage == i + 1 ? ' text-[#1a1d1f] border-[#1a1d1f]' : ' cursor-pointer'
             }`}
+            key={i}
             onClick={() => currentPage != i + 1 && onCurrentPageChange?.(i + 1)}
           >
             {i + 1}

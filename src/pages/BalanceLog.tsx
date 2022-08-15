@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Button from '../components/Button'
 import Card from '../components/Card'
 import Pagination from '../components/Pagination'
 import SearchInput from '../components/SearchInput'
-import Select from '../components/Select'
+import SelectDropdown from '../components/SelectDropdown'
 import Table, { ColumnType, RowType } from '../components/Table'
 
 const BalanceLog: React.FC = () => {
@@ -59,6 +59,26 @@ const BalanceLog: React.FC = () => {
       date: '2022-06-29 09:29:55',
     },
   ]
+  const selectOption = [
+    {
+      value: '',
+      label: 'All status',
+    },
+    {
+      value: 'active',
+      label: 'Active',
+    },
+    {
+      value: 'disabled',
+      label: 'Disabled',
+    },
+    {
+      value: 'inprocess',
+      label: 'Inprocess',
+    },
+  ]
+  const [status1, setStatus1] = useState<unknown>('')
+  const [status2, setStatus2] = useState<unknown>('')
   return (
     <Card title='Log'>
       <div className='grid grid-cols-6 items-center gap-2 overflow-x-auto'>
@@ -66,14 +86,18 @@ const BalanceLog: React.FC = () => {
           <SearchInput />
         </div>
         <div className='col-span-6 lg:col-span-1'>
-          <Select className='w-full'>
-            <option value=''>All Status</option>
-          </Select>
+          <SelectDropdown
+            options={selectOption}
+            onChange={(value) => setStatus1(value)}
+            value={status1}
+          />
         </div>
         <div className='col-span-6 lg:col-span-1'>
-          <Select className='w-full'>
-            <option value=''>Last 28 days</option>
-          </Select>
+          <SelectDropdown
+            options={selectOption}
+            onChange={(value) => setStatus2(value)}
+            value={status2}
+          />
         </div>
         <div className='col-span-6 lg:col-span-1'>
           <Button buttonStyle='primary' className='w-full'>

@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import AppCard from '../components/AppCard'
 import Card from '../components/Card'
 import Input from '../components/Input'
 import Popper from '../components/Popper'
 import SearchInput from '../components/SearchInput'
-import Select from '../components/Select'
+import SelectDropdown from '../components/SelectDropdown'
 import SVGIcon from '../components/SVGIcon'
 import CodesTableRow from '../components/Table/CodesTableRow'
 import CodesTableRowAlt from '../components/Table/CodesTableRowAlt'
@@ -43,6 +43,26 @@ const RentANumber = () => {
     },
   ]
 
+  const selectOption = [
+    {
+      value: '',
+      label: 'All status',
+    },
+    {
+      value: 'active',
+      label: 'Active',
+    },
+    {
+      value: 'disabled',
+      label: 'Disabled',
+    },
+    {
+      value: 'inprocess',
+      label: 'Inprocess',
+    },
+  ]
+  const [status1, setStatus1] = useState<unknown>('')
+
   return (
     <div className='grid grid-cols-1 lg:grid-cols-3 gap-2'>
       <div className='col-span-1'>
@@ -52,9 +72,11 @@ const RentANumber = () => {
               <label className='inline-block text-sm font-semibold text-[#33383f] mb-3'>
                 Carrier
               </label>
-              <Select className='w-full'>
-                <option>All</option>
-              </Select>
+              <SelectDropdown
+                options={selectOption}
+                onChange={(value) => setStatus1(value)}
+                value={status1}
+              />
             </div>
             <div className='col-span-1'>
               <Input label='Prefix' placeholder='Ex:0399,0935' inputStyle='outline' />

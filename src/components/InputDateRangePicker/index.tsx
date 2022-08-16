@@ -5,6 +5,8 @@ import ReactDOM from 'react-dom'
 import { usePopper } from 'react-popper'
 import useOnClickOutside from '../../hooks/useOnClickOutside'
 import SVGIcon from '../SVGIcon'
+import 'react-date-range/dist/styles.css'
+import './default.css'
 
 interface Props {
   className?: string
@@ -53,7 +55,7 @@ const InputDateRangePicker: React.FC<Props> = ({ className }) => {
       {isActive &&
         ReactDOM.createPortal(
           <div
-            className='popper-tooltip bg-[#fcfcfc] shadow-[0px_4px_24px_rgba(0,0,0,0.25)] rounded-xl p-2 min-w-[200px] z-50'
+            className='popper-tooltip bg-[#fcfcfc] shadow-[0px_4px_24px_rgba(0,0,0,0.25)] rounded-lg min-w-[200px] z-50 overflow-hidden p-6 max-w-full'
             ref={setPopperElement}
             style={styles.popper}
             {...attributes.popper}

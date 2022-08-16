@@ -61,66 +61,68 @@ const Home = () => {
             </div>
             <div className='col-span-1 overflow-x-auto'>
               <table className='text-sm font-medium text-[#1a1d1f] w-full'>
-                <tr>
-                  <td className='font-semibold text-left px-1 py-2'>
-                    <div className='flex items-center'>
-                      <span className='w-[8px] h-[8px] rounded-full bg-[#1890ff] mr-2'></span>
-                      Facebook
-                    </div>
-                  </td>
-                  <td className='text-right text-[#6f767e] px-1 py-2'>28.79%</td>
-                  <td className='text-right px-1 py-2'>1,000</td>
-                </tr>
-                <tr>
-                  <td className='font-semibold text-left px-1 py-2'>
-                    <div className='flex items-center'>
-                      <span className='w-[8px] h-[8px] rounded-full bg-[#13c2c2] mr-2'></span>
-                      Tinder
-                    </div>
-                  </td>
-                  <td className='text-right text-[#6f767e] px-1 py-2'>28.79%</td>
-                  <td className='text-right px-1 py-2'>1,000</td>
-                </tr>
-                <tr>
-                  <td className='font-semibold text-left px-1 py-2'>
-                    <div className='flex items-center'>
-                      <span className='w-[8px] h-[8px] rounded-full bg-[#52c41a] mr-2'></span>
-                      Tinder
-                    </div>
-                  </td>
-                  <td className='text-right text-[#6f767e] px-1 py-2'>28.79%</td>
-                  <td className='text-right px-1 py-2'>1,000</td>
-                </tr>
-                <tr>
-                  <td className='font-semibold text-left px-1 py-2'>
-                    <div className='flex items-center'>
-                      <span className='w-[8px] h-[8px] rounded-full bg-[#fadb14] mr-2'></span>
-                      Tinder
-                    </div>
-                  </td>
-                  <td className='text-right text-[#6f767e] px-1 py-2'>28.79%</td>
-                  <td className='text-right px-1 py-2'>1,000</td>
-                </tr>
-                <tr>
-                  <td className='font-semibold text-left px-1 py-2'>
-                    <div className='flex items-center'>
-                      <span className='w-[8px] h-[8px] rounded-full bg-[#ff4d4f] mr-2'></span>
-                      Tinder
-                    </div>
-                  </td>
-                  <td className='text-right text-[#6f767e] px-1 py-2'>28.79%</td>
-                  <td className='text-right px-1 py-2'>1,000</td>
-                </tr>
-                <tr>
-                  <td className='font-semibold text-left px-1 py-2'>
-                    <div className='flex items-center'>
-                      <span className='w-[8px] h-[8px] rounded-full bg-[#722ed1] mr-2'></span>
-                      Microsoft/hotmail/outlook
-                    </div>
-                  </td>
-                  <td className='text-right text-[#6f767e] px-1 py-2'>28.79%</td>
-                  <td className='text-right px-1 py-2'>1,000</td>
-                </tr>
+                <tbody>
+                  <tr>
+                    <td className='font-semibold text-left px-1 py-2'>
+                      <div className='flex items-center'>
+                        <span className='w-[8px] h-[8px] rounded-full bg-[#1890ff] mr-2'></span>
+                        Facebook
+                      </div>
+                    </td>
+                    <td className='text-right text-[#6f767e] px-1 py-2'>28.79%</td>
+                    <td className='text-right px-1 py-2'>1,000</td>
+                  </tr>
+                  <tr>
+                    <td className='font-semibold text-left px-1 py-2'>
+                      <div className='flex items-center'>
+                        <span className='w-[8px] h-[8px] rounded-full bg-[#13c2c2] mr-2'></span>
+                        Tinder
+                      </div>
+                    </td>
+                    <td className='text-right text-[#6f767e] px-1 py-2'>28.79%</td>
+                    <td className='text-right px-1 py-2'>1,000</td>
+                  </tr>
+                  <tr>
+                    <td className='font-semibold text-left px-1 py-2'>
+                      <div className='flex items-center'>
+                        <span className='w-[8px] h-[8px] rounded-full bg-[#52c41a] mr-2'></span>
+                        Tinder
+                      </div>
+                    </td>
+                    <td className='text-right text-[#6f767e] px-1 py-2'>28.79%</td>
+                    <td className='text-right px-1 py-2'>1,000</td>
+                  </tr>
+                  <tr>
+                    <td className='font-semibold text-left px-1 py-2'>
+                      <div className='flex items-center'>
+                        <span className='w-[8px] h-[8px] rounded-full bg-[#fadb14] mr-2'></span>
+                        Tinder
+                      </div>
+                    </td>
+                    <td className='text-right text-[#6f767e] px-1 py-2'>28.79%</td>
+                    <td className='text-right px-1 py-2'>1,000</td>
+                  </tr>
+                  <tr>
+                    <td className='font-semibold text-left px-1 py-2'>
+                      <div className='flex items-center'>
+                        <span className='w-[8px] h-[8px] rounded-full bg-[#ff4d4f] mr-2'></span>
+                        Tinder
+                      </div>
+                    </td>
+                    <td className='text-right text-[#6f767e] px-1 py-2'>28.79%</td>
+                    <td className='text-right px-1 py-2'>1,000</td>
+                  </tr>
+                  <tr>
+                    <td className='font-semibold text-left px-1 py-2'>
+                      <div className='flex items-center'>
+                        <span className='w-[8px] h-[8px] rounded-full bg-[#722ed1] mr-2'></span>
+                        Microsoft/hotmail/outlook
+                      </div>
+                    </td>
+                    <td className='text-right text-[#6f767e] px-1 py-2'>28.79%</td>
+                    <td className='text-right px-1 py-2'>1,000</td>
+                  </tr>
+                </tbody>
               </table>
             </div>
           </div>

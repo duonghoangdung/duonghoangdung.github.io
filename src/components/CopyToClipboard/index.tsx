@@ -4,7 +4,7 @@ import { usePopper } from 'react-popper'
 
 interface ChildProps {
   copy: (content: string) => void
-  setReferenceElement: (content: HTMLElement | null) => void
+  setReferenceElement: (referenceElement: HTMLDivElement) => void
 }
 interface Props {
   children: (props: ChildProps) => React.ReactElement
@@ -12,9 +12,9 @@ interface Props {
 
 const CopyToClipboard: React.FC<Props> = ({ children }) => {
   const [showTooltip, setShowTooltip] = useState(false)
-  const [popperElement, setPopperElement] = useState<HTMLElement | null>(null)
-  const [referenceElement, setReferenceElement] = useState<HTMLElement | null>(null)
-  const [arrowElement, setArrowElement] = useState<HTMLElement | null>(null)
+  const [referenceElement, setReferenceElement] = useState<HTMLDivElement | null>(null)
+  const [popperElement, setPopperElement] = useState<HTMLDivElement | null>(null)
+  const [arrowElement, setArrowElement] = useState<HTMLDivElement | null>(null)
   const { styles, attributes } = usePopper(referenceElement, popperElement, {
     strategy: 'fixed',
     placement: 'top',
@@ -46,7 +46,7 @@ const CopyToClipboard: React.FC<Props> = ({ children }) => {
       {children({ copy: onCopy, setReferenceElement })}
       {showTooltip && (
         <div
-          className='popper-tooltip text-xs font-semibold text-[#1a1d1f] bg-white rounded px-3 py-1 transition shadow'
+          className='popper-tooltip text-xs font-semibold text-[#1a1d1f] bg-white rounded px-3 py-1 shadow'
           ref={setPopperElement}
           style={styles.popper}
           {...attributes.popper}

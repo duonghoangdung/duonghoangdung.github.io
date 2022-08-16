@@ -39,7 +39,7 @@ const Popper: React.FC<Props> = ({ children, content, placement }) => {
       {children}
       {show && (
         <div
-          className='popper-tooltip text-xs font-semibold text-[#1a1d1f] bg-white rounded px-4 py-2 shadow-[0px_4px_24px_rgba(0,0,0,0.25)] transition'
+          className='popper-tooltip text-xs font-semibold text-[#1a1d1f] bg-white rounded px-4 py-2 shadow-[0px_4px_24px_rgba(0,0,0,0.25)]'
           ref={setPopperElement}
           style={styles.popper}
           {...attributes.popper}

@@ -22,13 +22,14 @@ const APIDocument = () => {
             <div className='grid grid-cols-2 gap-2 items-center'>
               <CopyToClipboard>
                 {({ copy, setReferenceElement }) => (
-                  <button
-                    ref={setReferenceElement}
-                    onClick={() => copy('9fd4b9ccdf38dc5a')}
-                    className='font-bold text-[#ffffff] bg-[#2a85ff] rounded-xl px-5 py-3'
-                  >
-                    Copy
-                  </button>
+                  <div className='inline-block' ref={setReferenceElement}>
+                    <button
+                      onClick={() => copy('9fd4b9ccdf38dc5a')}
+                      className='font-bold text-[#ffffff] bg-[#2a85ff] rounded-xl px-5 py-3'
+                    >
+                      Copy
+                    </button>
+                  </div>
                 )}
               </CopyToClipboard>
               <button className='font-bold text-[#1a1d1f] bg-[#fcfcfc] border-2 border-[#efefef] rounded-xl px-5 py-3'>

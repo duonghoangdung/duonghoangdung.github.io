@@ -19,13 +19,14 @@ const Addfund = () => {
                   1019556601
                   <CopyToClipboard>
                     {({ copy, setReferenceElement }) => (
-                      <button
-                        ref={setReferenceElement}
-                        onClick={() => copy('1019556601')}
-                        className='text-[#2a85ff] hover:opacity-75 transition-opacity ml-2'
-                      >
-                        Copy
-                      </button>
+                      <div ref={setReferenceElement} className='inline-block'>
+                        <button
+                          onClick={() => copy('1019556601')}
+                          className='text-[#2a85ff] hover:opacity-75 transition-opacity ml-2'
+                        >
+                          Copy
+                        </button>
+                      </div>
                     )}
                   </CopyToClipboard>
                 </div>
@@ -36,13 +37,14 @@ const Addfund = () => {
                   HA TRI TAM
                   <CopyToClipboard>
                     {({ copy, setReferenceElement }) => (
-                      <button
-                        ref={setReferenceElement}
-                        onClick={() => copy('HA TRI TAM')}
-                        className='text-[#2a85ff] hover:opacity-75 transition-opacity ml-2'
-                      >
-                        Copy
-                      </button>
+                      <div ref={setReferenceElement} className='inline-block'>
+                        <button
+                          onClick={() => copy('HA TRI TAM')}
+                          className='text-[#2a85ff] hover:opacity-75 transition-opacity ml-2'
+                        >
+                          Copy
+                        </button>
+                      </div>
                     )}
                   </CopyToClipboard>
                 </div>
@@ -53,13 +55,14 @@ const Addfund = () => {
                   CTSC 0399900661
                   <CopyToClipboard>
                     {({ copy, setReferenceElement }) => (
-                      <button
-                        ref={setReferenceElement}
-                        onClick={() => copy('1019556601')}
-                        className='text-[#2a85ff] hover:opacity-75 transition-opacity ml-2'
-                      >
-                        Copy
-                      </button>
+                      <div ref={setReferenceElement} className='inline-block'>
+                        <button
+                          onClick={() => copy('1019556601')}
+                          className='text-[#2a85ff] hover:opacity-75 transition-opacity ml-2'
+                        >
+                          Copy
+                        </button>
+                      </div>
                     )}
                   </CopyToClipboard>
                 </div>

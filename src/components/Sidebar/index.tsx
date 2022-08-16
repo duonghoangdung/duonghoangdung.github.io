@@ -50,6 +50,11 @@ const Sidebar = ({ ...props }) => {
       link: '/api-document',
       icon: 'web-development',
     },
+    {
+      text: 'Login',
+      link: '/login',
+      icon: 'web-development',
+    },
   ]
 
   return (

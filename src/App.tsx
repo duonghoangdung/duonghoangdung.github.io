@@ -8,6 +8,7 @@ import BalanceLog from './pages/BalanceLog'
 import OTPHistory from './pages/OTPHistory'
 import RentANumber from './pages/RentANumber'
 import Login from './pages/Login'
+import Register from './pages/Register'
 import DefaultLayout from './layouts/DefaultLayout'
 import LoginLayout from './layouts/LoginLayout'
 
@@ -76,6 +77,14 @@ function App() {
           element={
             <LoginLayout title='Login'>
               <Login />
+            </LoginLayout>
+          }
+        />
+        <Route
+          path='/register'
+          element={
+            <LoginLayout title='Register'>
+              <Register />
             </LoginLayout>
           }
         />

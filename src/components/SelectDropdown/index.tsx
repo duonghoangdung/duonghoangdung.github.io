@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState } from 'react'
 import useOnClickOutside from '../../hooks/useOnClickOutside'
 import SVGIcon from '../SVGIcon'
 import { usePopper } from 'react-popper'
@@ -23,17 +23,11 @@ const SelectDropdown: React.FC<Props> = ({
   onChange,
   ...props
 }) => {
-  const ref = useRef(null)
   const [isActive, setIsActive] = useState(false)
   const optionsSelected = options?.find((option) => option.value == value)
-  useOnClickOutside(ref, () => {
-    setTimeout(() => {
-      setIsActive(false)
-    }, 300)
-  })
-  const [referenceElement, setReferenceElement] = useState<HTMLElement | null>(null)
-  const [popperElement, setPopperElement] = useState<HTMLElement | null>(null)
-  const [arrowElement, setArrowElement] = useState<HTMLElement | null>(null)
+  const [referenceElement, setReferenceElement] = useState<HTMLDivElement | null>(null)
+  const [popperElement, setPopperElement] = useState<HTMLDivElement | null>(null)
+  const [arrowElement, setArrowElement] = useState<HTMLDivElement | null>(null)
   const { styles, attributes } = usePopper(referenceElement, popperElement, {
     placement: 'bottom',
     modifiers: [
@@ -52,12 +46,13 @@ const SelectDropdown: React.FC<Props> = ({
     ],
   })
 
+  useOnClickOutside([referenceElement, popperElement], () => setIsActive(false))
+
   return (
-    <div ref={ref} className='relative' {...props}>
+    <div ref={setReferenceElement} className='relative' {...props}>
       <div
         className='inline-flex items-center border-2 border-[#efefef] rounded-xl p-3 text-sm font-semibold text-[#1a1d1f] cursor-pointer h-[48px] w-full'
         onClick={() => setIsActive(!isActive)}
-        ref={setReferenceElement}
       >
         <span className='grow'>{optionsSelected ? optionsSelected.label : placeholder}</span>
         <SVGIcon name='arrow-down' className='ml-2' w={16} h={16} />

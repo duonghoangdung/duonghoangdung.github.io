@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Button from '../components/Button'
 import Card from '../components/Card'
+import InputDateRangePicker from '../components/InputDateRangePicker'
 import Pagination from '../components/Pagination'
 import SearchInput from '../components/SearchInput'
 import SelectDropdown from '../components/SelectDropdown'
@@ -78,7 +79,6 @@ const BalanceLog: React.FC = () => {
     },
   ]
   const [status1, setStatus1] = useState<unknown>('')
-  const [status2, setStatus2] = useState<unknown>('')
   return (
     <Card title='Log'>
       <div className='grid grid-cols-6 items-center gap-2 overflow-x-auto'>
@@ -93,11 +93,7 @@ const BalanceLog: React.FC = () => {
           />
         </div>
         <div className='col-span-6 lg:col-span-1'>
-          <SelectDropdown
-            options={selectOption}
-            onChange={(value) => setStatus2(value)}
-            value={status2}
-          />
+          <InputDateRangePicker className='w-full' />
         </div>
         <div className='col-span-6 lg:col-span-1'>
           <Button buttonStyle='primary' className='w-full'>

@@ -10,14 +10,14 @@ const OTPHistory = () => {
         <table>
           <thead className='text-sm font-semibold text-[#6f767e]'>
             <tr>
-              <th className='p-4 text-center whitespace-nowrap'>#</th>
-              <th className='p-4 text-left whitespace-nowrap'>App</th>
-              <th className='p-4 text-center whitespace-nowrap'>Status</th>
-              <th className='p-4 text-center whitespace-nowrap'>Phone number</th>
-              <th className='p-4 text-center whitespace-nowrap'>Code</th>
-              <th className='p-4 text-left whitespace-nowrap'>SMS</th>
-              <th className='p-4 text-center whitespace-nowrap'>Cost</th>
-              <th className='p-4 text-left whitespace-nowrap'>Time</th>
+              <th className='p-4 text-center whitespace-nowrap min-w-[50px]'>#</th>
+              <th className='p-4 text-left whitespace-nowrap min-w-[200px]'>App</th>
+              <th className='p-4 text-center whitespace-nowrap min-w-[100px]'>Status</th>
+              <th className='p-4 text-center whitespace-nowrap min-w-[150px]'>Phone number</th>
+              <th className='p-4 text-center whitespace-nowrap min-w-[100px]'>Code</th>
+              <th className='p-4 text-left whitespace-nowrap min-w-[300px]'>SMS</th>
+              <th className='p-4 text-center whitespace-nowrap min-w-[100px]'>Cost</th>
+              <th className='p-4 text-left whitespace-nowrap min-w-[200px]'>Time</th>
             </tr>
           </thead>
           <tbody className='text-sm font-normal text-[#1a1d1f]'>
@@ -71,7 +71,19 @@ const OTPHistory = () => {
             </tr>
           </tbody>
         </table>
-        <Pagination total={40} />
+        <Pagination
+          perPageOptions={[
+            {
+              name: '10/page',
+              value: 10,
+            },
+            {
+              name: '20/page',
+              value: 20,
+            },
+          ]}
+          total={40}
+        />
       </div>
     </Card>
   )

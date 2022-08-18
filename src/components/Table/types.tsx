@@ -2,6 +2,7 @@ type ColumnType = {
   label: string
   colspan?: number
   accessor: string
+  className?: string
 }
 
 type RowType = {

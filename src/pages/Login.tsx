@@ -16,7 +16,7 @@ const Login = () => {
       ></div>
       <div className='col-span-1 flex flex-col items-center justify-between bg-white rounded-t-2xl md:rounded-none overflow-hidden mt-[-20px] md:mt-0'>
         <div></div>
-        <div className='p-6 min-w-[408px]'>
+        <div className='p-6 min-w-[300px] md:min-w-[408px]'>
           <div className='text-5xl font-semibold text-[#1a1d1f] mb-8'>Login</div>
           <div className='mb-6'>
             <Input

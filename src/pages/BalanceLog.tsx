@@ -12,26 +12,32 @@ const BalanceLog: React.FC = () => {
     {
       label: '#',
       accessor: 'stt',
+      className: 'min-w-[60px]',
     },
     {
       label: 'Transaction type',
       accessor: 'transactionType',
+      className: 'min-w-[200px]',
     },
     {
       label: 'Substance',
       accessor: 'substance',
+      className: 'min-w-[250px]',
     },
     {
       label: 'Price',
       accessor: 'price',
+      className: 'min-w-[100px]',
     },
     {
       label: 'Volatility',
       accessor: 'volatility',
+      className: 'min-w-[200px]',
     },
     {
       label: 'Date',
       accessor: 'date',
+      className: 'min-w-[200px]',
     },
   ]
   const data: RowType[] = [
@@ -103,20 +109,20 @@ const BalanceLog: React.FC = () => {
       </div>
       <div className='overflow-x-auto'>
         <Table columns={columns} data={data} />
-        <Pagination
-          perPageOptions={[
-            {
-              name: '10/page',
-              value: 10,
-            },
-            {
-              name: '20/page',
-              value: 20,
-            },
-          ]}
-          total={40}
-        />
       </div>
+      <Pagination
+        perPageOptions={[
+          {
+            name: '10/page',
+            value: 10,
+          },
+          {
+            name: '20/page',
+            value: 20,
+          },
+        ]}
+        total={40}
+      />
     </Card>
   )
 }

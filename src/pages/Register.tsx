@@ -19,7 +19,7 @@ const Register = () => {
         <div className='p-6 min-w-[408px]'>
           <div className='text-5xl font-semibold text-[#1a1d1f] mb-8'>Register</div>
           <div className='mb-6'>
-            <Input label='Name' type='text' name='mame' id='name' placeholder='Name' />
+            <Input label='Full name' type='text' name='mame' id='name' placeholder='Your name' />
           </div>
           <div className='mb-6'>
             <Input
@@ -36,16 +36,16 @@ const Register = () => {
               type='password'
               name='password'
               id='password'
-              placeholder='Enter your password'
+              placeholder='Your password'
             />
           </div>
           <div className='mb-6'>
             <Input
-              label='Re-enter password'
+              label='Retype password'
               type='password'
               name='re_password'
               id='re_password'
-              placeholder='Re-enter your password'
+              placeholder='Retype your password'
             />
           </div>
           <div className='mb-6'>
@@ -54,9 +54,9 @@ const Register = () => {
             </Button>
           </div>
           <p className='text-sm font-normal text-[#1a1d1f]'>
-            Do you already have an account?&nbsp;
+            Already have an account?&nbsp;
             <NavLink to='/login' title='Login' className='text-[#2a85ff] underline'>
-              Login
+              Login now
             </NavLink>
           </p>
         </div>

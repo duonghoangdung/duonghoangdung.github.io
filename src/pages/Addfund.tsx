@@ -92,65 +92,65 @@ const Addfund = () => {
             <thead>
               <tr>
                 <th className='text-sm font-semibold text-[#6f767e] p-4 text-center'>#</th>
-                <th className='text-sm font-semibold text-[#6f767e] p-4 text-left'>Amount</th>
-                <th className='text-sm font-semibold text-[#6f767e] p-4 text-left'>Content</th>
-                <th className='text-sm font-semibold text-[#6f767e] p-4 text-center'>Time</th>
+                <th className='text-sm font-semibold text-[#6f767e] p-4 text-center'>Amount</th>
+                <th className='text-sm font-semibold text-[#6f767e] p-4 text-center'>Content</th>
+                <th className='text-sm font-semibold text-[#6f767e] p-4 text-right'>Time</th>
               </tr>
             </thead>
             <tbody className='text-sm font-normal text-[#1a1d1f]'>
               <tr>
                 <td className='border-b border-[#efefef] p-4 text-center'>1</td>
-                <td className='border-b border-[#efefef] p-4 text-left'>100.000</td>
-                <td className='border-b border-[#efefef] p-4 text-left'>CTSC 083721389</td>
-                <td className='border-b border-[#efefef] p-4 text-center'>2022-06-29 09:29:55</td>
+                <td className='border-b border-[#efefef] p-4 text-center'>100.000</td>
+                <td className='border-b border-[#efefef] p-4 text-center'>CTSC 083721389</td>
+                <td className='border-b border-[#efefef] p-4 text-right'>2022-06-29 09:29:55</td>
               </tr>
               <tr>
                 <td className='border-b border-[#efefef] p-4 text-center'>1</td>
-                <td className='border-b border-[#efefef] p-4 text-left'>100.000</td>
-                <td className='border-b border-[#efefef] p-4 text-left'>CTSC 083721389</td>
-                <td className='border-b border-[#efefef] p-4 text-center'>2022-06-29 09:29:55</td>
+                <td className='border-b border-[#efefef] p-4 text-center'>100.000</td>
+                <td className='border-b border-[#efefef] p-4 text-center'>CTSC 083721389</td>
+                <td className='border-b border-[#efefef] p-4 text-right'>2022-06-29 09:29:55</td>
               </tr>
               <tr>
                 <td className='border-b border-[#efefef] p-4 text-center'>1</td>
-                <td className='border-b border-[#efefef] p-4 text-left'>100.000</td>
-                <td className='border-b border-[#efefef] p-4 text-left'>CTSC 083721389</td>
-                <td className='border-b border-[#efefef] p-4 text-center'>2022-06-29 09:29:55</td>
+                <td className='border-b border-[#efefef] p-4 text-center'>100.000</td>
+                <td className='border-b border-[#efefef] p-4 text-center'>CTSC 083721389</td>
+                <td className='border-b border-[#efefef] p-4 text-right'>2022-06-29 09:29:55</td>
               </tr>
               <tr>
                 <td className='border-b border-[#efefef] p-4 text-center'>1</td>
-                <td className='border-b border-[#efefef] p-4 text-left'>100.000</td>
-                <td className='border-b border-[#efefef] p-4 text-left'>CTSC 083721389</td>
-                <td className='border-b border-[#efefef] p-4 text-center'>2022-06-29 09:29:55</td>
+                <td className='border-b border-[#efefef] p-4 text-center'>100.000</td>
+                <td className='border-b border-[#efefef] p-4 text-center'>CTSC 083721389</td>
+                <td className='border-b border-[#efefef] p-4 text-right'>2022-06-29 09:29:55</td>
               </tr>
               <tr>
                 <td className='border-b border-[#efefef] p-4 text-center'>1</td>
-                <td className='border-b border-[#efefef] p-4 text-left'>100.000</td>
-                <td className='border-b border-[#efefef] p-4 text-left'>CTSC 083721389</td>
-                <td className='border-b border-[#efefef] p-4 text-center'>2022-06-29 09:29:55</td>
+                <td className='border-b border-[#efefef] p-4 text-center'>100.000</td>
+                <td className='border-b border-[#efefef] p-4 text-center'>CTSC 083721389</td>
+                <td className='border-b border-[#efefef] p-4 text-right'>2022-06-29 09:29:55</td>
               </tr>
               <tr>
                 <td className='border-b border-[#efefef] p-4 text-center'>1</td>
-                <td className='border-b border-[#efefef] p-4 text-left'>100.000</td>
-                <td className='border-b border-[#efefef] p-4 text-left'>CTSC 083721389</td>
-                <td className='border-b border-[#efefef] p-4 text-center'>2022-06-29 09:29:55</td>
+                <td className='border-b border-[#efefef] p-4 text-center'>100.000</td>
+                <td className='border-b border-[#efefef] p-4 text-center'>CTSC 083721389</td>
+                <td className='border-b border-[#efefef] p-4 text-right'>2022-06-29 09:29:55</td>
               </tr>
               <tr>
                 <td className='border-b border-[#efefef] p-4 text-center'>1</td>
-                <td className='border-b border-[#efefef] p-4 text-left'>100.000</td>
-                <td className='border-b border-[#efefef] p-4 text-left'>CTSC 083721389</td>
-                <td className='border-b border-[#efefef] p-4 text-center'>2022-06-29 09:29:55</td>
+                <td className='border-b border-[#efefef] p-4 text-center'>100.000</td>
+                <td className='border-b border-[#efefef] p-4 text-center'>CTSC 083721389</td>
+                <td className='border-b border-[#efefef] p-4 text-right'>2022-06-29 09:29:55</td>
               </tr>
               <tr>
                 <td className='border-b border-[#efefef] p-4 text-center'>1</td>
-                <td className='border-b border-[#efefef] p-4 text-left'>100.000</td>
-                <td className='border-b border-[#efefef] p-4 text-left'>CTSC 083721389</td>
-                <td className='border-b border-[#efefef] p-4 text-center'>2022-06-29 09:29:55</td>
+                <td className='border-b border-[#efefef] p-4 text-center'>100.000</td>
+                <td className='border-b border-[#efefef] p-4 text-center'>CTSC 083721389</td>
+                <td className='border-b border-[#efefef] p-4 text-right'>2022-06-29 09:29:55</td>
               </tr>
               <tr>
                 <td className='border-b border-[#efefef] p-4 text-center'>1</td>
-                <td className='border-b border-[#efefef] p-4 text-left'>100.000</td>
-                <td className='border-b border-[#efefef] p-4 text-left'>CTSC 083721389</td>
-                <td className='border-b border-[#efefef] p-4 text-center'>2022-06-29 09:29:55</td>
+                <td className='border-b border-[#efefef] p-4 text-center'>100.000</td>
+                <td className='border-b border-[#efefef] p-4 text-center'>CTSC 083721389</td>
+                <td className='border-b border-[#efefef] p-4 text-right'>2022-06-29 09:29:55</td>
               </tr>
             </tbody>
           </table>

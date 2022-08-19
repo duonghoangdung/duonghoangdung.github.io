@@ -5,6 +5,7 @@ import { SidebarActionKind } from './reducer'
 import SwitchBox from '../SwitchBox'
 import SidebarMenu from './SidebarMenu'
 import SVGIcon from '../SVGIcon'
+import Logo from '../../assets/images/logo.svg'
 
 const Sidebar = ({ ...props }) => {
   const { state, dispatch } = useContext(SidebarContext)
@@ -79,7 +80,7 @@ const Sidebar = ({ ...props }) => {
               <div className='w-[48px] h-[48px] overflow-hidden relative'>
                 <img
                   className='absolute top-0 left-0 w-full h-full object-contain'
-                  src='https://via.placeholder.com/48x48.png'
+                  src={Logo}
                   alt=''
                 />
               </div>

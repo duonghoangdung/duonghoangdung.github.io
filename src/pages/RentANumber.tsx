@@ -101,22 +101,34 @@ const RentANumber = () => {
         <Card title='Codes'>
           <div className='overflow-x-auto'>
             <table className='w-full'>
-              <thead className='text-sm font-semibold text-[#6f767e]'>
+              <thead>
                 <tr>
-                  <th className='p-4 text-center'></th>
-                  <th className='p-4 text-center'>#</th>
-                  <th className='p-4 text-left'>App</th>
-                  <th className='p-4 text-center'>Status</th>
-                  <th className='p-4 text-center'>Phone Number</th>
-                  <th className='p-4 text-center'>Code</th>
-                  <th className='p-4 text-center'>Time</th>
+                  <th className='text-sm font-semibold text-[#6f767e] p-4 text-center min-w-[50px]'></th>
+                  <th className='text-sm font-semibold text-[#6f767e] p-4 text-center min-w-[50px]'>
+                    #
+                  </th>
+                  <th className='text-sm font-semibold text-[#6f767e] p-4 text-left min-w-[200px]'>
+                    App
+                  </th>
+                  <th className='text-sm font-semibold text-[#6f767e] p-4 text-center min-w-[50px]'>
+                    Status
+                  </th>
+                  <th className='text-sm font-semibold text-[#6f767e] p-4 text-center min-w-[140px]'>
+                    Phone Number
+                  </th>
+                  <th className='text-sm font-semibold text-[#6f767e] p-4 text-center min-w-[100px]'>
+                    Code
+                  </th>
+                  <th className='text-sm font-semibold text-[#6f767e] p-4 text-right min-w-[200px]'>
+                    Time
+                  </th>
                 </tr>
               </thead>
               <tbody className='text-sm font-normal text-[#1a1d1f]'>
                 <tr>
-                  <td className='border-b border-[#efefef] p-4 text-center min-w-[50px]'></td>
-                  <td className='border-b border-[#efefef] p-4 text-center min-w-[50px]'>1</td>
-                  <td className='border-b border-[#efefef] p-4 text-left min-w-[200px]'>
+                  <td className='border-b border-[#efefef] p-4 text-center'></td>
+                  <td className='border-b border-[#efefef] p-4 text-center'>1</td>
+                  <td className='border-b border-[#efefef] p-4 text-left'>
                     <AppCard
                       name='Tinder'
                       image='//via.placeholder.com/40x40.png'
@@ -124,20 +136,14 @@ const RentANumber = () => {
                       className='bg-transparent p-0'
                     />
                   </td>
-                  <td className='border-b border-[#efefef] p-4 text-center min-w-[60px]'>
+                  <td className='border-b border-[#efefef] p-4 text-center'>
                     <span className='font-semibold text-[#83bf6e] px-2 py-1 bg-[#eafae4] rounded'>
                       Active
                     </span>
                   </td>
-                  <td className='border-b border-[#efefef] p-4 text-center min-w-[140px]'>
-                    098779736
-                  </td>
-                  <td className='border-b border-[#efefef] p-4 text-center min-w-[100px]'>
-                    8884642
-                  </td>
-                  <td className='border-b border-[#efefef] p-4 text-center min-w-[200px]'>
-                    2022-06-29 09:29:55
-                  </td>
+                  <td className='border-b border-[#efefef] p-4 text-center'>098779736</td>
+                  <td className='border-b border-[#efefef] p-4 text-center'>8884642</td>
+                  <td className='border-b border-[#efefef] p-4 text-right'>2022-06-29 09:29:55</td>
                 </tr>
                 <CodesTableRow />
                 <CodesTableRowAlt />

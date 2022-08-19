@@ -11,9 +11,9 @@ const TableBody: React.FC<Props> = ({ data, columns, ...props }) => {
     <tbody className='text-sm font-normal text-[#1a1d1f]' {...props}>
       {data.map((dataRow, index) => (
         <tr key={index}>
-          {columns.map(({ accessor, colspan }) => (
+          {columns.map(({ accessor, colspan, align }) => (
             <td
-              className='border-b border-[#efefef] p-4 text-center'
+              className={`border-b border-[#efefef] p-4 text-left${align && ` text-${align}`}`}
               colSpan={colspan || 1}
               key={accessor}
             >

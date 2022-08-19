@@ -7,11 +7,13 @@ type Props = {
 
 const TableHead: React.FC<Props> = ({ columns, ...props }) => {
   return (
-    <thead className='text-sm font-semibold text-[#6f767e]' {...props}>
+    <thead {...props}>
       <tr>
-        {columns.map(({ label, accessor, colspan, className }) => (
+        {columns.map(({ label, accessor, colspan, className, align }) => (
           <th
-            className={`p-4 text-center ${className || ''}`}
+            className={`text-sm font-semibold text-[#6f767e] p-4 text-left
+              ${className && ` ${className}`}
+              ${align && ` text-${align}`}`}
             colSpan={colspan || 1}
             key={accessor}
           >

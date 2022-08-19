@@ -3,7 +3,7 @@ import Marquee from 'react-fast-marquee'
 import { SidebarContext } from './Sidebar/context'
 import { SidebarActionKind } from './Sidebar/reducer'
 import SVGIcon from './SVGIcon'
-
+import Avatar from '../assets/images/avatar.png'
 const Topbar = ({ ...props }) => {
   const { dispatch } = useContext(SidebarContext)
 
@@ -36,7 +36,7 @@ const Topbar = ({ ...props }) => {
             <div className='w-[48px] h-[48px] relative overflow-hidden rounded-full'>
               <img
                 className='absolute top-0 left-0 right-0 w-full h-full object-cover'
-                src='//via.placeholder.com/48x48.png'
+                src={Avatar}
                 alt=''
               />
             </div>

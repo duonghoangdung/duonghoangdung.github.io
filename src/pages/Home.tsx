@@ -136,16 +136,18 @@ const Home = () => {
           </div>
           <div className='overflow-x-auto'>
             <table className='w-full'>
-              <thead className='text-sm font-semibold text-[#6f767e] hidden md:table-header-group'>
+              <thead className='hidden md:table-header-group'>
                 <tr>
-                  <th className='border-b border-[#efefef] hidden md:table-cell text-left px-5 py-4'>
+                  <th className='text-sm font-semibold text-[#6f767e] border-b border-[#efefef] hidden md:table-cell text-left px-5 py-4'>
                     #
                   </th>
-                  <th className='border-b border-[#efefef] text-left px-5 py-4'>App</th>
-                  <th className='border-b border-[#efefef] hidden md:table-cell text-center px-5 py-4'>
+                  <th className='text-sm font-semibold text-[#6f767e] border-b border-[#efefef] text-left px-5 py-4'>
+                    App
+                  </th>
+                  <th className='text-sm font-semibold text-[#6f767e] border-b border-[#efefef] hidden md:table-cell text-center px-5 py-4'>
                     Done
                   </th>
-                  <th className='border-b border-[#efefef] hidden md:table-cell text-right px-5 py-4'>
+                  <th className='text-sm font-semibold text-[#6f767e] border-b border-[#efefef] hidden md:table-cell text-right px-5 py-4'>
                     Expired
                   </th>
                 </tr>

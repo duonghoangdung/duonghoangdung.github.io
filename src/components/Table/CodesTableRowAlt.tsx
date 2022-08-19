@@ -31,20 +31,20 @@ const CodesTableRowAlt = () => {
             className='bg-transparent p-0'
           />
         </td>
-        <td className='p-4 pb-0 text-center'>
+        <td className='p-4 text-center'>
           <span className='font-semibold text-[#83bf6e] px-2 py-1 bg-[#eafae4] rounded'>
             Active
           </span>
         </td>
         <td className='p-4 text-center'>098779736</td>
         <td className='p-4 text-center'>8884642</td>
-        <td className='p-4 text-center'>2022-06-29 09:29:55</td>
+        <td className='p-4 text-right'>2022-06-29 09:29:55</td>
       </tr>
       <tr>
         <td className='border-b border-[#efefef] text-center' colSpan={2}></td>
         <td className='border-b border-[#efefef] text-left'>
           <CSSTransition in={isShow} timeout={300} classNames='slide-x' unmountOnExit>
-            <div className='pb-4'>
+            <div className='p-4 pt-0'>
               <div>Cost</div>
               <div>1.1</div>
             </div>
@@ -52,7 +52,7 @@ const CodesTableRowAlt = () => {
         </td>
         <td className='border-b border-[#efefef]' colSpan={4}>
           <CSSTransition in={isShow} timeout={300} classNames='slide-x' unmountOnExit>
-            <div className='pb-4'>
+            <div className='p-4 pt-0'>
               <audio controls>
                 <source src='horse.ogg' type='audio/ogg' />
                 <source src='horse.mp3' type='audio/mpeg' />

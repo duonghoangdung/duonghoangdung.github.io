@@ -13,31 +13,37 @@ const BalanceLog: React.FC = () => {
       label: '#',
       accessor: 'stt',
       className: 'min-w-[60px]',
+      align: 'left',
     },
     {
       label: 'Transaction type',
       accessor: 'transactionType',
       className: 'min-w-[200px]',
+      align: 'center',
     },
     {
       label: 'Substance',
       accessor: 'substance',
       className: 'min-w-[250px]',
+      align: 'center',
     },
     {
       label: 'Price',
       accessor: 'price',
       className: 'min-w-[100px]',
+      align: 'center',
     },
     {
       label: 'Volatility',
       accessor: 'volatility',
       className: 'min-w-[200px]',
+      align: 'center',
     },
     {
       label: 'Date',
       accessor: 'date',
       className: 'min-w-[200px]',
+      align: 'right',
     },
   ]
   const data: RowType[] = [

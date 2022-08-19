@@ -89,12 +89,12 @@ const Addfund = () => {
         </Card>
         <Card title='Addfund List' cardStyle='ffbc99'>
           <table className='table-auto w-full'>
-            <thead className='text-sm font-semibold text-[#6f767e]'>
+            <thead>
               <tr>
-                <th className='p-4 text-center'>#</th>
-                <th className='p-4 text-left'>Amount</th>
-                <th className='p-4 text-left'>Content</th>
-                <th className='p-4 text-center'>Time</th>
+                <th className='text-sm font-semibold text-[#6f767e] p-4 text-center'>#</th>
+                <th className='text-sm font-semibold text-[#6f767e] p-4 text-left'>Amount</th>
+                <th className='text-sm font-semibold text-[#6f767e] p-4 text-left'>Content</th>
+                <th className='text-sm font-semibold text-[#6f767e] p-4 text-center'>Time</th>
               </tr>
             </thead>
             <tbody className='text-sm font-normal text-[#1a1d1f]'>

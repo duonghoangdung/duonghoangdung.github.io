@@ -3,6 +3,7 @@ type ColumnType = {
   colspan?: number
   accessor: string
   className?: string
+  align?: string
 }
 
 type RowType = {

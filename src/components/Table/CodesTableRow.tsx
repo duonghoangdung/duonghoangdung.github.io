@@ -38,7 +38,7 @@ const CodesTableRow = () => {
         </td>
         <td className='p-4 text-center'>098779736</td>
         <td className='p-4 text-center'>8884642</td>
-        <td className='p-4 text-center'>2022-06-29 09:29:55</td>
+        <td className='p-4 text-right'>2022-06-29 09:29:55</td>
       </tr>
       <tr>
         <td className='border-b border-[#efefef] text-center' colSpan={2}></td>

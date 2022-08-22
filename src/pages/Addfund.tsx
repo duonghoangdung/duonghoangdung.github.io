@@ -1,20 +1,22 @@
 import Card from '../components/Card'
 import CopyToClipboard from '../components/CopyToClipboard'
 import Pagination from '../components/Pagination'
+import { useTranslation } from 'react-i18next'
 
 const Addfund = () => {
+  const { t } = useTranslation()
   return (
     <div className='grid grid-cols-1 lg:grid-cols-3 gap-2'>
       <div className='col-span-1 lg:col-span-2'>
-        <Card title='Addfund infomation' cardStyle='b5e4ca'>
+        <Card title={t('Addfund infomation')} cardStyle='b5e4ca'>
           <div className='bg-[#f4f4f4] p-6 rounded-lg mb-6 text-sm font-semibold'>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
               <div>
-                <div className='text-[#6f767e] mb-2'>Bank</div>
+                <div className='text-[#6f767e] mb-2'>{t('Bank')}</div>
                 <div className='text-[#1a1d1f]'>Vietcombank</div>
               </div>
               <div>
-                <div className='text-[#6f767e] mb-2'>Account number</div>
+                <div className='text-[#6f767e] mb-2'>{t('Account number')}</div>
                 <div className='text-[#1a1d1f]'>
                   1019556601
                   <CopyToClipboard>
@@ -24,7 +26,7 @@ const Addfund = () => {
                           onClick={() => copy('1019556601')}
                           className='text-[#2a85ff] hover:opacity-75 transition-opacity ml-2'
                         >
-                          Copy
+                          {t('Copy')}
                         </button>
                       </div>
                     )}
@@ -32,7 +34,7 @@ const Addfund = () => {
                 </div>
               </div>
               <div>
-                <div className='text-[#6f767e] mb-2'>Account owner&apos;s name</div>
+                <div className='text-[#6f767e] mb-2'>{t('Account owner&apos;s name')}</div>
                 <div className='text-[#1a1d1f]'>
                   HA TRI TAM
                   <CopyToClipboard>
@@ -42,7 +44,7 @@ const Addfund = () => {
                           onClick={() => copy('HA TRI TAM')}
                           className='text-[#2a85ff] hover:opacity-75 transition-opacity ml-2'
                         >
-                          Copy
+                          {t('Copy')}
                         </button>
                       </div>
                     )}
@@ -50,7 +52,7 @@ const Addfund = () => {
                 </div>
               </div>
               <div>
-                <div className='text-[#6f767e] mb-2'>Transaction content</div>
+                <div className='text-[#6f767e] mb-2'>{t('Transaction content')}</div>
                 <div className='text-[#1a1d1f]'>
                   CTSC 0399900661
                   <CopyToClipboard>
@@ -60,7 +62,7 @@ const Addfund = () => {
                           onClick={() => copy('1019556601')}
                           className='text-[#2a85ff] hover:opacity-75 transition-opacity ml-2'
                         >
-                          Copy
+                          {t('Copy')}
                         </button>
                       </div>
                     )}
@@ -87,7 +89,7 @@ const Addfund = () => {
             *Hệ thống không chịu trách nhiệm nếu nội dung nạp không đúng CTSC 0399900661
           </p>
         </Card>
-        <Card title='Addfund List' cardStyle='ffbc99'>
+        <Card title={t('Addfund List')} cardStyle='ffbc99'>
           <table className='table-auto w-full'>
             <thead>
               <tr>
@@ -170,7 +172,7 @@ const Addfund = () => {
         </Card>
       </div>
       <div className='col-span-1'>
-        <Card title='Note' cardStyle='note'>
+        <Card title={t('Note')} cardStyle='note'>
           <div>
             <ul className='list-disc text-sm font-medium text-[#1a1d1f] pl-4'>
               <li className='mb-2'>

@@ -2,8 +2,10 @@ import React from 'react'
 import AppCard from '../components/AppCard'
 import Card from '../components/Card'
 import Pagination from '../components/Pagination'
+import { useTranslation } from 'react-i18next'
 
 const OTPHistory = () => {
+  const { t } = useTranslation()
   return (
     <Card title='Purchased codes'>
       <div className='overflow-x-auto'>
@@ -11,28 +13,28 @@ const OTPHistory = () => {
           <thead>
             <tr>
               <th className='text-sm font-semibold text-[#6f767e] p-4 text-left whitespace-nowrap min-w-[50px]'>
-                #
+                {t('#')}
               </th>
               <th className='text-sm font-semibold text-[#6f767e] p-4 text-left whitespace-nowrap min-w-[200px]'>
-                App
+                {t('App')}
               </th>
               <th className='text-sm font-semibold text-[#6f767e] p-4 text-center whitespace-nowrap min-w-[100px]'>
-                Status
+                {t('Status')}
               </th>
               <th className='text-sm font-semibold text-[#6f767e] p-4 text-center whitespace-nowrap min-w-[150px]'>
-                Phone number
+                {t('Phone number')}
               </th>
               <th className='text-sm font-semibold text-[#6f767e] p-4 text-center whitespace-nowrap min-w-[100px]'>
-                Code
+                {t('Code')}
               </th>
               <th className='text-sm font-semibold text-[#6f767e] p-4 text-left whitespace-nowrap min-w-[300px]'>
-                SMS
+                {t('SMS')}
               </th>
               <th className='text-sm font-semibold text-[#6f767e] p-4 text-center whitespace-nowrap min-w-[100px]'>
-                Cost
+                {t('Cost')}
               </th>
               <th className='text-sm font-semibold text-[#6f767e] p-4 text-right whitespace-nowrap min-w-[200px]'>
-                Time
+                {t('Time')}
               </th>
             </tr>
           </thead>
@@ -90,11 +92,11 @@ const OTPHistory = () => {
         <Pagination
           perPageOptions={[
             {
-              name: '10/page',
+              name: '10/' + t('Page'),
               value: 10,
             },
             {
-              name: '20/page',
+              name: '20/' + t('Page'),
               value: 20,
             },
           ]}

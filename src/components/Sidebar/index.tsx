@@ -6,53 +6,54 @@ import SwitchBox from '../SwitchBox'
 import SidebarMenu from './SidebarMenu'
 import SVGIcon from '../SVGIcon'
 import Logo from '../../assets/images/logo.svg'
+import { useTranslation } from 'react-i18next'
 
 const Sidebar = ({ ...props }) => {
   const { state, dispatch } = useContext(SidebarContext)
-
+  const { t } = useTranslation()
   const menu = [
     {
-      text: 'Home',
+      text: t('Home'),
       link: '/',
       icon: 'home',
     },
     {
-      text: 'OTP',
+      text: t('OTP'),
       link: '/otp',
       icon: 'sim',
       children: [
         {
-          text: 'Rent A Number',
+          text: t('Rent A Number'),
           link: '/rent-a-number',
         },
         {
-          text: 'OTP History',
+          text: t('OTP History'),
           link: '/otp-history',
         },
       ],
     },
     {
-      text: 'Account Infomation',
+      text: t('Account Information'),
       link: '/account-information',
       icon: 'profile',
     },
     {
-      text: 'Addfund',
+      text: t('Addfund'),
       link: '/addfund',
       icon: 'bank',
     },
     {
-      text: 'Balance Log',
+      text: t('Balance Log'),
       link: '/balance-log',
       icon: 'wallet',
     },
     {
-      text: 'API Document',
+      text: t('API Document'),
       link: '/api-document',
       icon: 'web-development',
     },
     {
-      text: 'Login',
+      text: t('Login'),
       link: '/login',
       icon: 'web-development',
     },

@@ -8,8 +8,10 @@ import SelectDropdown from '../components/SelectDropdown'
 import SVGIcon from '../components/SVGIcon'
 import CodesTableRow from '../components/Table/CodesTableRow'
 import CodesTableRowAlt from '../components/Table/CodesTableRowAlt'
+import { useTranslation } from 'react-i18next'
 
 const RentANumber = () => {
+  const { t } = useTranslation()
   const apps = [
     {
       name: 'Tinder',
@@ -46,19 +48,19 @@ const RentANumber = () => {
   const selectOption = [
     {
       value: '',
-      label: 'All status',
+      label: t('All status'),
     },
     {
       value: 'active',
-      label: 'Active',
+      label: t('Active'),
     },
     {
       value: 'disabled',
-      label: 'Disabled',
+      label: t('Disabled'),
     },
     {
       value: 'inprocess',
-      label: 'Inprocess',
+      label: t('Inprocess'),
     },
   ]
   const [status1, setStatus1] = useState<unknown>('')
@@ -66,11 +68,11 @@ const RentANumber = () => {
   return (
     <div className='grid grid-cols-1 lg:grid-cols-3 gap-2'>
       <div className='col-span-1'>
-        <Card title='Application list'>
+        <Card title={t('Application list')}>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-2 mb-3'>
             <div className='col-span-1'>
               <label className='inline-block text-sm font-semibold text-[#33383f] mb-3'>
-                Carrier
+                {t('Carrier')}
               </label>
               <SelectDropdown
                 options={selectOption}
@@ -79,13 +81,13 @@ const RentANumber = () => {
               />
             </div>
             <div className='col-span-1'>
-              <Input label='Prefix' placeholder='Ex:0399,0935' inputStyle='outline' />
+              <Input label={t('Prefix')} placeholder='Ex:0399,0935' inputStyle='outline' />
             </div>
             <div className='col-span-1 md:col-span-2'>
-              <SearchInput />
+              <SearchInput placeholder={t('Search products')} />
             </div>
           </div>
-          <div className='text-sm font-medium text-[#6f767e] mb-3'>Select to buy</div>
+          <div className='text-sm font-medium text-[#6f767e] mb-3'>{t('Select to buy')}</div>
           <div className='grid grid-cols-2 gap-2'>
             {apps.map(({ name, image, description }, index) => (
               <Popper content={name} key={index}>
@@ -98,29 +100,29 @@ const RentANumber = () => {
         </Card>
       </div>
       <div className='col-span-1 lg:col-span-2'>
-        <Card title='Codes'>
+        <Card title={t('Codes')}>
           <div className='overflow-x-auto'>
             <table className='w-full'>
               <thead>
                 <tr>
                   <th className='text-sm font-semibold text-[#6f767e] p-4 text-center min-w-[50px]'></th>
                   <th className='text-sm font-semibold text-[#6f767e] p-4 text-center min-w-[50px]'>
-                    #
+                    {t('#')}
                   </th>
                   <th className='text-sm font-semibold text-[#6f767e] p-4 text-left min-w-[200px]'>
-                    App
+                    {t('App')}
                   </th>
-                  <th className='text-sm font-semibold text-[#6f767e] p-4 text-center min-w-[50px]'>
-                    Status
+                  <th className='text-sm font-semibold text-[#6f767e] p-4 text-center min-w-[200px]'>
+                    {t('Status')}
                   </th>
                   <th className='text-sm font-semibold text-[#6f767e] p-4 text-center min-w-[140px]'>
-                    Phone Number
+                    {t('Phone number')}
                   </th>
                   <th className='text-sm font-semibold text-[#6f767e] p-4 text-center min-w-[100px]'>
-                    Code
+                    {t('Code')}
                   </th>
                   <th className='text-sm font-semibold text-[#6f767e] p-4 text-right min-w-[200px]'>
-                    Time
+                    {t('Time')}
                   </th>
                 </tr>
               </thead>
@@ -138,7 +140,7 @@ const RentANumber = () => {
                   </td>
                   <td className='border-b border-[#efefef] p-4 text-center'>
                     <span className='font-semibold text-[#83bf6e] px-2 py-1 bg-[#eafae4] rounded'>
-                      Active
+                      {t('Active')}
                     </span>
                   </td>
                   <td className='border-b border-[#efefef] p-4 text-center'>098779736</td>

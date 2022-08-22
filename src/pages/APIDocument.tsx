@@ -4,8 +4,10 @@ import Button from '../components/Button'
 import Card from '../components/Card'
 import CopyToClipboard from '../components/CopyToClipboard'
 import SVGIcon from '../components/SVGIcon'
+import { useTranslation } from 'react-i18next'
 
 const APIDocument = () => {
+  const { t } = useTranslation()
   return (
     <div className='grid grid-cols-1 lg:grid-cols-3 gap-2'>
       <div className='col-span-1 lg:col-span-2'>
@@ -16,7 +18,7 @@ const APIDocument = () => {
                 <SVGIcon name='code' w={64} h={64} />
               </div>
               <div>
-                <div className='text-sm font-semibold text-[#6f767e] mb-2'>You API Key</div>
+                <div className='text-sm font-semibold text-[#6f767e] mb-2'>{t('Your API Key')}</div>
                 <div className='text-sm font-semibold text-[#1a1d1f]'>9fd4b9ccdf38dc5a</div>
               </div>
             </div>
@@ -29,12 +31,12 @@ const APIDocument = () => {
                       className='w-full'
                       buttonStyle='primary'
                     >
-                      Copy
+                      {t('Copy')}
                     </Button>
                   </div>
                 )}
               </CopyToClipboard>
-              <Button className='w-full'>Renew</Button>
+              <Button className='w-full'>{t('Renew')}</Button>
             </div>
           </div>
         </Card>
@@ -87,7 +89,7 @@ const APIDocument = () => {
         </Card>
       </div>
       <div className='col-span-1'>
-        <Card title='Note' cardStyle='note'>
+        <Card title={t('Note')} cardStyle='note'>
           <div>
             <ul className='list-disc text-sm font-medium text-[#1a1d1f] pl-4'>
               <li className='mb-2'>

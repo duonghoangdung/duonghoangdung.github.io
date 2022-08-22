@@ -5,10 +5,12 @@ import { Doughnut } from 'react-chartjs-2'
 import Pagination from '../components/Pagination'
 import HomeDetailTableRow from '../components/HomeDetailTableRow'
 import SVGIcon from '../components/SVGIcon'
+import { useTranslation } from 'react-i18next'
 
 ChartJS.register(ArcElement, Tooltip)
 
 const Home = () => {
+  const { t } = useTranslation()
   const dataChart = {
     labels: ['Facebook', 'Tinder', 'Tinder', 'Tinder', 'Tinder', 'Microsoft/hotmail/outlook'],
     datasets: [
@@ -38,17 +40,17 @@ const Home = () => {
   return (
     <div className='grid grid-cols-1 lg:grid-cols-3 gap-2'>
       <div className='col-span-1'>
-        <Card title='Account information' cardStyle='cabdff'>
+        <Card title={t('Account Information')} cardStyle='cabdff'>
           <div className='mb-6'>
-            <div className='text-sm font-semibold text-[#6f767e] mb-2'>Full Name</div>
+            <div className='text-sm font-semibold text-[#6f767e] mb-2'>{t('Full name')}</div>
             <div className='text-sm font-semibold text-[#1a1d1f]'>VO THI PHUONG</div>
           </div>
           <div className='mb-6'>
-            <div className='text-sm font-semibold text-[#6f767e] mb-2'>Phone number</div>
+            <div className='text-sm font-semibold text-[#6f767e] mb-2'>{t('Phone number')}</div>
             <div className='text-sm font-semibold text-[#1a1d1f]'>0399900661</div>
           </div>
           <div className='mb-6'>
-            <div className='text-sm font-semibold text-[#6f767e] mb-2'>Balance</div>
+            <div className='text-sm font-semibold text-[#6f767e] mb-2'>{t('Balance')}</div>
             <div className='text-sm font-semibold text-[#1a1d1f]'>1,673.51 đ</div>
           </div>
         </Card>
@@ -127,7 +129,7 @@ const Home = () => {
             </div>
           </div>
         </Card>
-        <Card title='Detail' cardStyle='ffbc99'>
+        <Card title={t('Detail')} cardStyle='ffbc99'>
           <div className='flex md:hidden items-center bg-[#efefef] rounded-xl p-3 h-[48px] mb-5'>
             <div className='text-sm font-semibold text-[#6f767e]'>Sort by:</div>
             <select className='grow text-sm font-semibold text-[#1a1d1f] bg-transparent focus-visible:outline-none'>
@@ -142,13 +144,13 @@ const Home = () => {
                     #
                   </th>
                   <th className='text-sm font-semibold text-[#6f767e] border-b border-[#efefef] text-left px-5 py-4'>
-                    App
+                    {t('App')}
                   </th>
                   <th className='text-sm font-semibold text-[#6f767e] border-b border-[#efefef] hidden md:table-cell text-center px-5 py-4'>
-                    Done
+                    {t('Done')}
                   </th>
                   <th className='text-sm font-semibold text-[#6f767e] border-b border-[#efefef] hidden md:table-cell text-right px-5 py-4'>
-                    Expired
+                    {t('Expired')}
                   </th>
                 </tr>
               </thead>
@@ -164,11 +166,11 @@ const Home = () => {
             <Pagination
               perPageOptions={[
                 {
-                  name: '10/page',
+                  name: '10/' + t('Page'),
                   value: 10,
                 },
                 {
-                  name: '20/page',
+                  name: '20' + t('Page'),
                   value: 20,
                 },
               ]}

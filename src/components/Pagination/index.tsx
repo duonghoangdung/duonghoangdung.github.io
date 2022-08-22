@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import SVGIcon from '../SVGIcon'
+import { useTranslation } from 'react-i18next'
 
 type perPageOptionType = {
   value: number
@@ -28,6 +29,7 @@ const Pagination: React.FC<Props> = ({
 }) => {
   const [perPage, setPerPage] = useState<number>(10)
   const totalPage = Math.ceil(total / perPage)
+  const { t } = useTranslation()
   return (
     <div
       className={`flex flex-wrap gap-3 justify-center md:justify-between items-center mt-5 w-full ${className}`}
@@ -35,7 +37,7 @@ const Pagination: React.FC<Props> = ({
     >
       {!!perPageOptions?.length && (
         <div className='flex items-center'>
-          <span className='text-xs font-semibold mr-3'>Show</span>
+          <span className='text-xs font-semibold mr-3'>{t('Show')}</span>
           <select
             className='text-xs font-semibold border-2 border-[#effefef] px-3 py-1 rounded-sm'
             value={perPage}

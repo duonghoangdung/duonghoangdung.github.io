@@ -2,6 +2,7 @@ import React from 'react'
 import Button from '../Button'
 import SVGIcon from '../SVGIcon'
 import { CSSTransition } from 'react-transition-group'
+import { useTranslation } from 'react-i18next'
 
 interface Props {
   title: string
@@ -12,6 +13,7 @@ interface Props {
 }
 
 const Modal: React.FC<Props> = ({ title, children, open, onClose, onConfirm }) => {
+  const { t } = useTranslation()
   return (
     <>
       <CSSTransition in={open} timeout={300} classNames='modal-backdrop-transition' unmountOnExit>
@@ -31,9 +33,9 @@ const Modal: React.FC<Props> = ({ title, children, open, onClose, onConfirm }) =
             </div>
             <div>{children}</div>
             <div className='flex items-center justify-end gap-3'>
-              <Button onClick={onClose}>Cancel</Button>
+              <Button onClick={onClose}>{t('Cancel')}</Button>
               <Button buttonStyle='primary' onClick={onConfirm}>
-                Update
+                {t('Update')}
               </Button>
             </div>
           </div>

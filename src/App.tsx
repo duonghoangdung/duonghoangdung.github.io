@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-
+import './i18n'
 import Home from './pages/Home'
 import AccountInformation from './pages/AccountInformation'
 import Addfund from './pages/Addfund'
@@ -11,8 +11,10 @@ import Login from './pages/Login'
 import Register from './pages/Register'
 import DefaultLayout from './layouts/DefaultLayout'
 import LoginLayout from './layouts/LoginLayout'
+import { useTranslation } from 'react-i18next'
 
 function App() {
+  const { t } = useTranslation()
   return (
     <BrowserRouter>
       <Routes>
@@ -27,7 +29,7 @@ function App() {
         <Route
           path='/account-information'
           element={
-            <DefaultLayout title='Account Information'>
+            <DefaultLayout title={t('Account Information')}>
               <AccountInformation />
             </DefaultLayout>
           }
@@ -35,7 +37,7 @@ function App() {
         <Route
           path='/addfund'
           element={
-            <DefaultLayout title='Addfund'>
+            <DefaultLayout title={t('Addfund')}>
               <Addfund />
             </DefaultLayout>
           }
@@ -43,7 +45,7 @@ function App() {
         <Route
           path='/api-document'
           element={
-            <DefaultLayout title='API Document'>
+            <DefaultLayout title={t('API Document')}>
               <APIDocument />
             </DefaultLayout>
           }
@@ -51,7 +53,7 @@ function App() {
         <Route
           path='/balance-log'
           element={
-            <DefaultLayout title='Balance Log'>
+            <DefaultLayout title={t('Balance Log')}>
               <BalanceLog />
             </DefaultLayout>
           }
@@ -59,7 +61,7 @@ function App() {
         <Route
           path='/otp-history'
           element={
-            <DefaultLayout title='OTP History'>
+            <DefaultLayout title={t('OTP History')}>
               <OTPHistory />
             </DefaultLayout>
           }
@@ -67,7 +69,7 @@ function App() {
         <Route
           path='/rent-a-number'
           element={
-            <DefaultLayout title='Rent A Number'>
+            <DefaultLayout title={t('Rent A Number')}>
               <RentANumber />
             </DefaultLayout>
           }
@@ -75,7 +77,7 @@ function App() {
         <Route
           path='/login'
           element={
-            <LoginLayout title='Login'>
+            <LoginLayout title={t('Login')}>
               <Login />
             </LoginLayout>
           }
@@ -83,7 +85,7 @@ function App() {
         <Route
           path='/register'
           element={
-            <LoginLayout title='Register'>
+            <LoginLayout title={t('Register')}>
               <Register />
             </LoginLayout>
           }

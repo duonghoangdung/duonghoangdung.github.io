@@ -2,9 +2,11 @@ import React, { useState } from 'react'
 import AppCard from '../AppCard'
 import SVGIcon from '../SVGIcon'
 import { CSSTransition } from 'react-transition-group'
+import { useTranslation } from 'react-i18next'
 
 const CodesTableRowAlt = () => {
   const [isShow, setIsShow] = useState<boolean>(false)
+  const { t } = useTranslation()
   return (
     <>
       <tr>
@@ -33,7 +35,7 @@ const CodesTableRowAlt = () => {
         </td>
         <td className='p-4 text-center'>
           <span className='font-semibold text-[#83bf6e] px-2 py-1 bg-[#eafae4] rounded'>
-            Active
+            {t('Active')}
           </span>
         </td>
         <td className='p-4 text-center'>098779736</td>

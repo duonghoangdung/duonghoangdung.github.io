@@ -6,41 +6,43 @@ import Pagination from '../components/Pagination'
 import SearchInput from '../components/SearchInput'
 import SelectDropdown from '../components/SelectDropdown'
 import Table, { ColumnType, RowType } from '../components/Table'
+import { useTranslation } from 'react-i18next'
 
 const BalanceLog: React.FC = () => {
+  const { t } = useTranslation()
   const columns: ColumnType[] = [
     {
-      label: '#',
+      label: t('#'),
       accessor: 'stt',
       className: 'min-w-[60px]',
       align: 'left',
     },
     {
-      label: 'Transaction type',
+      label: t('Transaction type'),
       accessor: 'transactionType',
       className: 'min-w-[200px]',
       align: 'center',
     },
     {
-      label: 'Substance',
+      label: t('Substance'),
       accessor: 'substance',
       className: 'min-w-[250px]',
       align: 'center',
     },
     {
-      label: 'Price',
+      label: t('Price'),
       accessor: 'price',
       className: 'min-w-[100px]',
       align: 'center',
     },
     {
-      label: 'Volatility',
+      label: t('Volatility'),
       accessor: 'volatility',
       className: 'min-w-[200px]',
       align: 'center',
     },
     {
-      label: 'Date',
+      label: t('Date'),
       accessor: 'date',
       className: 'min-w-[200px]',
       align: 'right',
@@ -75,27 +77,27 @@ const BalanceLog: React.FC = () => {
   const selectOption = [
     {
       value: '',
-      label: 'All status',
+      label: t('All status'),
     },
     {
       value: 'active',
-      label: 'Active',
+      label: t('Active'),
     },
     {
       value: 'disabled',
-      label: 'Disabled',
+      label: t('Disabled'),
     },
     {
       value: 'inprocess',
-      label: 'Inprocess',
+      label: t('Inprocess'),
     },
   ]
   const [status1, setStatus1] = useState<unknown>('')
   return (
-    <Card title='Log'>
+    <Card title={t('Log')}>
       <div className='grid grid-cols-6 items-center gap-2 overflow-x-auto'>
         <div className='col-span-6 lg:col-span-3'>
-          <SearchInput />
+          <SearchInput placeholder={t('Search products')} />
         </div>
         <div className='col-span-6 lg:col-span-1'>
           <SelectDropdown
@@ -109,7 +111,7 @@ const BalanceLog: React.FC = () => {
         </div>
         <div className='col-span-6 lg:col-span-1'>
           <Button buttonStyle='primary' className='w-full'>
-            Search
+            {t('Search')}
           </Button>
         </div>
       </div>
@@ -119,11 +121,11 @@ const BalanceLog: React.FC = () => {
       <Pagination
         perPageOptions={[
           {
-            name: '10/page',
+            name: '10/' + t('Page'),
             value: 10,
           },
           {
-            name: '20/page',
+            name: '20/' + t('Page'),
             value: 20,
           },
         ]}

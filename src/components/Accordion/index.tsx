@@ -14,7 +14,7 @@ const Accordion: React.FC<Props> = ({ title, children, active, ...props }) => {
   return (
     <div className='border-b border-[#efefef] py-4 mb-2' {...props}>
       <div
-        className='flex items-center text-xl font-semibold text-[#1a1d1f] cursor-pointer'
+        className='flex items-center text-lg md:text-xl font-semibold text-[#1a1d1f] cursor-pointer'
         onClick={() => setIsActive(!isActive)}
       >
         <span className='grow'>{title}</span>

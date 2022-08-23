@@ -11,7 +11,7 @@ const AccountInformation = () => {
     <>
       <div className='bg-[#fcfcfc] p-6 rounded-lg mb-2'>
         <div className='mb-8'>
-          <div className='relative text-xl font-semibold text-[#1a1d1f] mb-6 pl-8'>
+          <div className='relative text-lg md:text-xl font-semibold text-[#1a1d1f] mb-6 pl-8'>
             <div className='absolute top-0 left-0 h-full w-4 bg-[#b5e4ca] rounded'></div>
             <span>Information</span>
           </div>

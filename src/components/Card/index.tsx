@@ -33,7 +33,7 @@ const Card: React.FC<Props> = ({ children, title, cardStyle, ...props }) => {
   }
   return (
     <div className={`${backgroundColor} px-6 py-7 rounded-lg mb-2 ${backgroundOpacity}`} {...props}>
-      <div className='relative text-xl font-semibold text-[#1a1d1f] mb-6 pl-8'>
+      <div className='relative text-lg md:text-xl font-semibold text-[#1a1d1f] mb-6 pl-8'>
         <div className={`absolute top-0 left-0 h-full w-4 ${titleTagColor} rounded`}></div>
         <span>{title}</span>
       </div>

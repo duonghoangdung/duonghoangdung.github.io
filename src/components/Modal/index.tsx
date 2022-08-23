@@ -23,7 +23,7 @@ const Modal: React.FC<Props> = ({ title, children, open, onClose, onConfirm }) =
         <div className='inline-flex items-center justify-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 overflow-x-auto max-h-screen transition w-11/12 sm:w-auto'>
           <div className='bg-[#fcfcfc] p-6 shadow rounded-2xl w-full max-w-[340px]'>
             <div className='border-b border-[#efefef] pb-6 mb-6'>
-              <div className='flex items-center relative text-xl font-semibold text-[#1a1d1f] pl-8 '>
+              <div className='flex items-center relative text-lg md:text-xl font-semibold text-[#1a1d1f] pl-8 '>
                 <div className={'absolute top-0 left-0 h-full w-4 bg-[#ffbc99] rounded'}></div>
                 <span className='grow'>{title}</span>
                 <button type='button' onClick={onClose}>
